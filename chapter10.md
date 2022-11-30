@@ -1,0 +1,21 @@
+# 相关分析
+
+- 相关（correlation）：两个变量之间不精确、不稳定的变化关系。
+- 正相关（positive correlation）：变化方向相同的两个变量之间的相关。
+- 负相关（negative correlation）：变化方向相反的两个变量之间的相关。
+- 零相关（zero correlation）：两个变量的变化方向没有一定的规律，表示两个变量之间没有相关。
+- 相关系数（correlation coefficient）：一种特征量，用来描述两个变量之间相关的方向和密切程度。
+- 积差相关系数（Pearson product moment correlation coefficient）：表示两个呈线性关系的正态连续变量之间的相关程度的特征量，它是协方差除以两个变量的标准差所得的值。
+- 协方差（covariance）：两个变量离差乘积之和除以 n 所得之商，它是计算积差相关系数的基础。
+- 等级相关系数（rank correlation coefficient）：表示顺序水平的变量之间的相关程度的特征量。
+- 斯皮尔曼等级相关系数（Spearman's rank correlation coefficient）：用来表示两个顺序水平的变量之间的相关程度的等级相关系数。
+- 肯德尔和谐系数（或称肯德尔一致性系数，Kendall''s concordance coefficient）：用来表示多个顺序水平的变量之间的相关程度的等级相关系数。常用于分析多个评定者对同一组个体进行等级评定的一致性程度，或同一个评定者对同一组个体进行多次等级评定的一致性程度。
+- 质量相关系数（correlation coefficient between a quality and a quantity variable）：品质型变量（根据事物的某一属性划分不同质的种类）与数量型变量之间的相关系数。
+- 品质相关系数（correlation coefficient between two quality variables）：品质型变量之间的相关系数。
+- 二列相关系数（biserial correlation coefficient）：当两个变量都是正态连续变量，而其中一个变量被人为地划分为两个类别时，这两个变量之间的相关系数。
+- 点二列相关系数（point biserial correlation coefficient）：一个正态连续性变量与另一个真正的二分称名变量（或双峰分布的变量）之间的相关程度。
+- 多列相关系数（multiserial correlation coefficient）：当两个变量都是正态连续变量，而其中一个变量被人为地划分为多个（两个以上）类别时，这两个变量之间的相关系数。
+- 中相关系数（phi coefficient）：两个二分变量之间的相关系数。
+- 复相关分析（multiple correlation analysis）：研究两个以上变量之间相关的方法。
+- 复相关系数（multiple correlation coefficient）：一个因变量与多个自变量之间的相关系数。
+- 偏相关系数（partial correlation coefficient）：通过固定其他因素而计算出的某两个因素之间的相关系数，又称为净相关系数。

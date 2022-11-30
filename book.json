@@ -1,0 +1,42 @@
+{
+    "title": "机器学习数学基础",
+    "author": "老齐",
+    "description": "数学和机器学习的融合",
+    "language": "zh-hans",
+    "isbn": "",
+    "links":{
+        "sidebar":{
+            "老齐教室": "http://www.itdiffer.com",
+            "视频课程": "https://appqtulvsie4217.pc.xiaoe-tech.com/detail/p_6243c2a9e4b01c509a9c1c8e/6"
+        }
+    },
+    "plugins": [
+        "-highlight", 
+        "image-captions", 
+        "fontsettings", 
+        "expandable-chapters-small", 
+        "simple-page-toc",
+        "copy-code-button",
+        "copyright",
+        "icp",
+        "-katex",
+        "mathjax-pro"
+    ],
+    "pluginsConfig": {
+        "simple-page-toc":{
+            "maxDepthe": 3,
+            "skipFirstH1":true
+        },
+        "copyright": {
+            "site": "http://math.itdiffer.com",
+            "author": "老齐",
+            "website": "机器学习",
+            "image": "http://math.itdiffer.com/images/0.jpg",
+            "copyProtect": true
+        },
+        "icp": {
+            "number": "苏ICP备13034293号-2",
+            "link": "https://beian.miit.gov.cn/"
+        }
+    }
+}
