@@ -1,6 +1,4 @@
-# 勘误和修改
-
-*打开本页，如果没有显示公式，请刷新页面。*
+# 《机器学习数学基础》勘误和修改
 
 **[下载本页的 PDF 版](./images/corrigendum221129.pdf)**
 
@@ -37,21 +35,21 @@
 
    - 原文：
 
-     在同一个向量空间，由基 $$[\pmb\alpha]$$ 向基 $$[\pmb\beta]$$ 的过渡矩阵是 $$\pmb{P}$$ ，则：
+     在同一个向量空间，由基 $[\pmb\alpha]$ 向基 $[\pmb\beta]$ 的过渡矩阵是 $\pmb{P}$ ，则：
 
      $$[\pmb\beta] = \pmb P[\pmb\alpha]$$
 
-     注意：$$[\pmb\alpha]$$ 和 $$[\pmb\beta]$$ 分别用行向量方式表示此向量空间的不同的基。
+     注意：$[\pmb\alpha]$ 和 $[\pmb\beta]$ 分别用行向量方式表示此向量空间的不同的基。
 
    - 修改为：
 
-     在同一个向量空间，由基 $$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$ 向基 $$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$ 的过渡矩阵是 $$\pmb{P}$$ ，则：
+     在同一个向量空间，由基 $\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$ 向基 $\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$ 的过渡矩阵是 $\pmb{P}$ ，则：
      
      $$[\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n] = [\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n]\pmb P$$
 
 4. 位置：30页，正文第13行
 
-   - 原文：注意：$$[\pmb{\alpha}]$$ 和 $$[\pmb{\beta}]$$ 分别用列向量方式表示此向量空间的不同的基。
+   - 原文：注意：$[\pmb{\alpha}]$ 和 $[\pmb{\beta}]$ 分别用列向量方式表示此向量空间的不同的基。
    - 修改说明：删除原文中的那一行。
 
 5. 位置：30页，正文第15至第7行
@@ -68,13 +66,13 @@
 
    - 原文
 
-     在某个向量空间中，由基 $$[\pmb\alpha]$$ 向基 $$[\pmb\beta]$$ 的过渡矩阵是 $$\pmb{P}$$ 。某向量在基 $$[\pmb\alpha]$$ 的坐标是 $$\pmb x $$，在基 $$[\pmb\beta]$$ 的坐标是 $$\pmb x'$$，这两组坐标之间的关系是：
+     在某个向量空间中，由基 $[\pmb\alpha]$ 向基 $[\pmb\beta]$ 的过渡矩阵是 $\pmb{P}$ 。某向量在基 $[\pmb\alpha]$ 的坐标是 $\pmb x $，在基 $[\pmb\beta]$ 的坐标是 $\pmb x^\prime$，这两组坐标之间的关系是：
 
      $$\pmb x = \pmb P \pmb x'$$
 
    - 修改为：
 
-     在某个向量空间中，由基 $$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$ 向基 $$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$ 的过渡矩阵是 $$\pmb{P}$$ 。某向量在基 $$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$ 的坐标是 $$\pmb{x}=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix} $$，在基 $$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$ 的坐标是 $$\pmb x'=\begin{bmatrix}x_1'\\\vdots \\x_n'\end{bmatrix}$$，这两组坐标之间的关系是：
+     在某个向量空间中，由基 $\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$ 向基 $\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$ 的过渡矩阵是 $\pmb{P}$ 。某向量在基 $\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$ 的坐标是 $\pmb{x}=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix} $，在基 $\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$ 的坐标是 $\pmb x'=\begin{bmatrix}x_1'\\\vdots \\x_n'\end{bmatrix}$，这两组坐标之间的关系是：
      
      $$\pmb x = \pmb P \pmb x'$$
 
@@ -82,8 +80,8 @@
 
 7. 位置：31页，正文，倒数第2行
 
-   - 原文：同样，在 $$x'Oy'$$ 中，分别以基向量的 $$\overrightarrow{Oi}$$ 和 $$\overrightarrow{Oj}$$ 的长度为单位长度并建立 $$x'$$ 和 $$y'$$ 坐标轴。
-   - 同样，在 $$x'Oy'$$ 中，分别以基向量的 $$\overrightarrow{Oi'}$$ 和 $$\overrightarrow{Oj'}$$ 的长度为单位长度并建立 $$x'$$ 和 $$y'$$ 坐标轴。
+   - 原文：同样，在 $x'Oy'$ 中，分别以基向量的 $\overrightarrow{Oi}$ 和 $\overrightarrow{Oj}$ 的长度为单位长度并建立 $x'$ 和 $y'$ 坐标轴。
+   - 同样，在 $x'Oy'$ 中，分别以基向量的 $\overrightarrow{Oi'}$ 和 $\overrightarrow{Oj'}$ 的长度为单位长度并建立 $x'$ 和 $y'$ 坐标轴。
    - 致谢：此错误由读者**李韬**指出，非常感谢。
 
 8. 位置：36页，正文第2行
@@ -94,30 +92,30 @@
 
 9. 位置：39页，正文第1行
 
-   - 原文：$$d(\pmb{u},\pmb{v})=\pmb{u}-\pmb{v}$$
+   - 原文：$d(\pmb{u},\pmb{v})=\pmb{u}-\pmb{v}$
 
-   - 修改为：$$d(\pmb{u},\pmb{v})=\begin{Vmatrix}\pmb{u}-\pmb{v}\end{Vmatrix}$$$
+   - 修改为：$d(\pmb{u},\pmb{v})=\begin{Vmatrix}\pmb{u}-\pmb{v}\end{Vmatrix}$
 
 10. 位置：39页，正文第2行
 
-   - 原文：$$\pmb u - \pmb v  = \sqrt{\langle (\pmb u - \pmb v), (\pmb u - \pmb v)\rangle}$$
-   - 修改为：$$\begin{Vmatrix}\pmb u - \pmb v \end{Vmatrix} = \sqrt{\langle (\pmb u - \pmb v), (\pmb u - \pmb v)\rangle}$$
+   - 原文：$\pmb u - \pmb v  = \sqrt{\langle (\pmb u - \pmb v), (\pmb u - \pmb v)\rangle}$
+   - 修改为：$\begin{Vmatrix}\pmb u - \pmb v \end{Vmatrix} = \sqrt{\langle (\pmb u - \pmb v), (\pmb u - \pmb v)\rangle}$
 
 11. 位置：41页，图1-5-4下第4行
 
-    - 原文：$$d(\pmb u, \pmb v) = u_1 - v_1 + \cdots + u_n - v_n = \sum_{i=1}^n |u_i - v_i|$$
-    - 修改为：$$d(\pmb u, \pmb v) = \begin{vmatrix}u_1 - v_1\end{vmatrix} + \cdots + \begin{vmatrix}u_n - v_n\end{vmatrix} = \sum_{i=1}^n |u_i - v_i|$$
-    - 修改说明：原文中的 $$u_1-v_1$$ 和 $$u_n-v_n$$ 应该加上绝对值符号
+    - 原文：$d(\pmb u, \pmb v) = u_1 - v_1 + \cdots + u_n - v_n = \sum_{i=1}^n |u_i - v_i|$
+    - 修改为：$d(\pmb u, \pmb v) = \begin{vmatrix}u_1 - v_1\end{vmatrix} + \cdots + \begin{vmatrix}u_n - v_n\end{vmatrix} = \sum_{i=1}^n |u_i - v_i|$
+    - 修改说明：原文中的 $u_1-v_1$ 和 $u_n-v_n$ 应该加上绝对值符号
 
 12. 位置：46页，倒数第5行
 
-    - 原文：$$\begin{Vmatrix} \pmb u \end{Vmatrix}_1 = u_1 + \cdots + u_n = \sum_{r=1}^{r=n}|u_i|$$
-    - 修改为：$$\begin{Vmatrix} \pmb u \end{Vmatrix}_1 = |u_1| + \cdots + |u_n| = \sum_{r=1}^{r=n}|u_i|$$
+    - 原文：$\begin{Vmatrix} \pmb u \end{Vmatrix}_1 = u_1 + \cdots + u_n = \sum_{r=1}^{r=n}|u_i|$
+    - 修改为：$\begin{Vmatrix} \pmb u \end{Vmatrix}_1 = |u_1| + \cdots + |u_n| = \sum_{r=1}^{r=n}|u_i|$
 
 13. 位置：49页，图1-5-9下的第1行
 
-    - 原文：对于 $$\Delta ABC$$ ，
-    - 修改为：对于 $$\Delta OAB$$ ，
+    - 原文：对于 $\Delta ABC$ ，
+    - 修改为：对于 $\Delta OAB$ ，
 
 14. 位置：51页，表1-5-1
 
@@ -129,13 +127,13 @@
 
 15. 位置：51页，表1-5-1之下的第 2 行
 
-    - 原文：$$\pmb{d}_2=\begin{bmatrix}2\\0\\1\\1\\1\\1\\1\end{bmatrix}$$
-    - 修改为：$$\pmb{d}_2=\begin{bmatrix}1\\0\\1\\1\\1\\1\\2\end{bmatrix}$$
+    - 原文：$\pmb{d}_2=\begin{bmatrix}2\\0\\1\\1\\1\\1\\1\end{bmatrix}$
+    - 修改为：$\pmb{d}_2=\begin{bmatrix}1\\0\\1\\1\\1\\1\\2\end{bmatrix}$
 
 16. 位置：52页，正文第4行
 
-    - 原文：在 1.4.1 中曾有一个这样的内积函数： $$\langle\pmb{u},\pmb{v}\rangle=x_1y_1+4x_2y_2$$ ，
-    - 修改为：设内积函数：$$\langle\pmb{u},\pmb{v}\rangle=x_1x_2+4y_1y_2$$ ，
+    - 原文：在 1.4.1 中曾有一个这样的内积函数： $\langle\pmb{u},\pmb{v}\rangle=x_1y_1+4x_2y_2$ ，
+    - 修改为：设内积函数：$\langle\pmb{u},\pmb{v}\rangle=x_1x_2+4y_1y_2$ ，
 
 17. 位置：58页，正文第1行
 
@@ -157,7 +155,7 @@
 
 19. 位置：71页，正文第10行、第11行
 
-    - 原文：但另一个被称为“线性函数”的 $$f(x) = kx + b$$ 不符合上述规定的第二条（$$f(cx) = kcx + b, c(fx) = ckx + cb$$ ，得：$$f(cx) \ne cf(x)$$ ），
+    - 原文：但另一个被称为“线性函数”的 $f(x) = kx + b$ 不符合上述规定的第二条（$f(cx) = kcx + b, c(fx) = ckx + cb$ ，得：$f(cx) \ne cf(x)$ ），
     - 修改为：但另一个被称为“线性函数”的 $f(x) = kx + b$ 仅以上述规定的第二条考察（$f(cx) = kcx + b, c(fx) = ckx + cb$，得：$f(cx) \ne cf(x)$ ），就明显不符合，
     - 修改说明：表述方式进行修改
 
@@ -167,17 +165,17 @@
 
       性质
 
-      矩阵列向量线性无关 $$\Longleftrightarrow$$ $$\begin{vmatrix}\pmb{A}\end{vmatrix}\ne 0$$
+      矩阵列向量线性无关 $\Longleftrightarrow$ $\begin{vmatrix}\pmb{A}\end{vmatrix}\ne 0$
 
-      矩阵列向量线性相关 $$\Longleftrightarrow$$ $$\begin{vmatrix}\pmb{A}\end{vmatrix}= 0$$ 
+      矩阵列向量线性相关 $\Longleftrightarrow$ $\begin{vmatrix}\pmb{A}\end{vmatrix}= 0$ 
 
     - 修改为：
 
       性质
 
-      - 矩阵列向量线性无关 $$\Longleftrightarrow$$ $$\begin{vmatrix}\pmb{A}\end{vmatrix}\ne 0$$
+      - 矩阵列向量线性无关 $\Longleftrightarrow$ $\begin{vmatrix}\pmb{A}\end{vmatrix}\ne 0$
 
-      - 矩阵列向量线性相关 $$\Longleftrightarrow$$ $$\begin{vmatrix}\pmb{A}\end{vmatrix}= 0$$ 
+      - 矩阵列向量线性相关 $\Longleftrightarrow$ $\begin{vmatrix}\pmb{A}\end{vmatrix}= 0$ 
 
     - 修改说明：
 
@@ -186,8 +184,8 @@
 
 21. 位置：102页，正文第1行
 
-    - 原文：观察可知，原线性方程组有解，又因为 $$m=3$$ ，$$n=4$$ ，$$m<n$$ ，所以原线性方程组有无穷多个解。
-    - 修改为：观察可知，原线性方程组有解；又因为阶梯形矩阵的非零行数量 $$r=3$$ ，未知量个数 $$n=4$$ ，$$r<n$$ ，所以原线性方程组有无穷多个解。
+    - 原文：观察可知，原线性方程组有解，又因为 $m=3$ ，$n=4$ ，$m<n$ ，所以原线性方程组有无穷多个解。
+    - 修改为：观察可知，原线性方程组有解；又因为阶梯形矩阵的非零行数量 $r=3$ ，未知量个数 $n=4$ ，$r<n$ ，所以原线性方程组有无穷多个解。
 
 22. 位置：107页，正文，倒数第3行
 
@@ -197,8 +195,8 @@
 
 23. 位置：114页，图2-7-4上面的第1行
 
-    - 原文：从 $$C$$ 到 $$A$$ 。
-    - 修改为：从 $$C$$ 到 $$B$$ 。
+    - 原文：从 $C$ 到 $A$ 。
+    - 修改为：从 $C$ 到 $B$ 。
     - 致谢：此错误由读者西交利物浦大学的周若骏同学指出，非常感谢。
 
 24. 位置：115页，正文（不含代码），倒数第3行
@@ -220,13 +218,13 @@
 
 27. 位置：125页，正文，第14行
 
-    - 原文：$$\begin{vmatrix}\pmb{A}-\lambda \pmb{I}_n \end{vmatrix}= \begin{vmatrix}-4-\lambda&-6\\3&5-\lambda\end{vmatrix}=(-4-\lambda)(5-\lambda)+1$$
-    - 修改为：$$\begin{vmatrix}\pmb{A}-\lambda \pmb{I}_n \end{vmatrix}= \begin{vmatrix}-4-\lambda&-6\\3&5-\lambda\end{vmatrix}=(-4-\lambda)(5-\lambda)+18$$
+    - 原文：$\begin{vmatrix}\pmb{A}-\lambda \pmb{I}_n \end{vmatrix}= \begin{vmatrix}-4-\lambda&-6\\3&5-\lambda\end{vmatrix}=(-4-\lambda)(5-\lambda)+1$
+    - 修改为：$\begin{vmatrix}\pmb{A}-\lambda \pmb{I}_n \end{vmatrix}= \begin{vmatrix}-4-\lambda&-6\\3&5-\lambda\end{vmatrix}=(-4-\lambda)(5-\lambda)+18$
 
 28. 位置：125页，正文，第15行
 
-    - 原文：即：$$(-4-\lambda)(5-\lambda)+1=0$$，
-    - 修改为：即：$$(-4-\lambda)(5-\lambda)+18=0$$，
+    - 原文：即：$(-4-\lambda)(5-\lambda)+1=0$，
+    - 修改为：即：$(-4-\lambda)(5-\lambda)+18=0$，
 
 29. 位置：132页，第1个代码段
 
@@ -251,41 +249,41 @@
 
 30. 位置：133页，正文，倒数第1行公式：
 
-    - 原文：$$\begin{bmatrix}a_{11}&\cdots&a_{1n}\\\vdots&\vdots&\vdots\\a_{n1}&\cdots&a_{nn}\end{bmatrix}-\begin{bmatrix}1\\\vdots\\1\end{bmatrix}=\begin{bmatrix}a_{11}-1&\cdots&a_{1n}\\\vdots&a_{ij}-1&\vdots\\a_{n1}&\cdots&a_{nn}-1\end{bmatrix}$$
-    - 修改为：$$\begin{bmatrix}a_{11}&\cdots&a_{1n}\\\vdots&\ddots&\vdots\\a_{n1}&\cdots&a_{nn}\end{bmatrix}-\begin{bmatrix}1&\cdots&0\\\vdots&\ddots&\vdots\\0&\cdots&1\end{bmatrix}=\begin{bmatrix}a_{11}-1&\cdots&a_{1n}\\\vdots&a_{ij}-1&\vdots\\a_{n1}&\cdots&a_{nn}-1\end{bmatrix}$$
+    - 原文：$\begin{bmatrix}a_{11}&\cdots&a_{1n}\\\vdots&\vdots&\vdots\\a_{n1}&\cdots&a_{nn}\end{bmatrix}-\begin{bmatrix}1\\\vdots\\1\end{bmatrix}=\begin{bmatrix}a_{11}-1&\cdots&a_{1n}\\\vdots&a_{ij}-1&\vdots\\a_{n1}&\cdots&a_{nn}-1\end{bmatrix}$
+    - 修改为：$\begin{bmatrix}a_{11}&\cdots&a_{1n}\\\vdots&\ddots&\vdots\\a_{n1}&\cdots&a_{nn}\end{bmatrix}-\begin{bmatrix}1&\cdots&0\\\vdots&\ddots&\vdots\\0&\cdots&1\end{bmatrix}=\begin{bmatrix}a_{11}-1&\cdots&a_{1n}\\\vdots&a_{ij}-1&\vdots\\a_{n1}&\cdots&a_{nn}-1\end{bmatrix}$
 
 31. 位置：134页，正文，第3行，公式：
 
-    - 原文：$$\begin{vmatrix}\pmb{A}-\pmb{1}\end{vmatrix}=0$$
-    - 修改为：$$\begin{vmatrix}\pmb{A}-1\cdot\pmb{I}_n\end{vmatrix}=0$$ 
+    - 原文：$\begin{vmatrix}\pmb{A}-\pmb{1}\end{vmatrix}=0$
+    - 修改为：$\begin{vmatrix}\pmb{A}-1\cdot\pmb{I}_n\end{vmatrix}=0$ 
 
 32. 位置：137页，正文，3.3.1节的标题之下第4行
 
-    - 原文：设极大线性无关向量组 $$\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_2\}$$ 和 $$\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$$ 分别作为两个向量空间的基
-    - 修改为：设极大线性无关向量组 $$\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_2\}$$ 和 $$\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$$ 分别作为向量空间的两个基
+    - 原文：设极大线性无关向量组 $\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_2\}$ 和 $\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$ 分别作为两个向量空间的基
+    - 修改为：设极大线性无关向量组 $\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_2\}$ 和 $\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$ 分别作为向量空间的两个基
     - 修改说明：“两个向量空间的基”改为“向量空间的两个基”
 
 33. 位置：137页，正文，3.3.1节的标题之下第9行
 
-    - 原文：$$[\pmb\alpha]=\pmb{P}^{-1}[\pmb\beta]$$
-    - 修改为：$$[\pmb\alpha]=[\pmb\beta]\pmb{P}^{-1}$$
+    - 原文：$[\pmb\alpha]=\pmb{P}^{-1}[\pmb\beta]$
+    - 修改为：$[\pmb\alpha]=[\pmb\beta]\pmb{P}^{-1}$
 
 34. 位置：137页，正文，倒数第1行
 
-    - 原文：$$\overrightarrow{OM} = \pmb{Av}_\alpha$$
-    - 修改为：$$\overrightarrow{ON} = \pmb{Av}_\alpha$$
+    - 原文：$\overrightarrow{OM} = \pmb{Av}_\alpha$
+    - 修改为：$\overrightarrow{ON} = \pmb{Av}_\alpha$
     - 致谢：此错误由读者**李韬**指出，非常感谢。
 
 35. 位置：154页，正文，第二行
 
-    - 原文：$$\pmb{a}_i=\begin{bmatrix}a_{i1}\\\vdots\\a_{im}\end{bmatrix},(i=1,2,\cdots,n)$$
-    - 修改为：$$\pmb{a}_i=\begin{bmatrix}a_{1i}\\\vdots\\a_{mi}\end{bmatrix},(i=1,2,\cdots,n)$$
+    - 原文：$\pmb{a}_i=\begin{bmatrix}a_{i1}\\\vdots\\a_{im}\end{bmatrix},(i=1,2,\cdots,n)$
+    - 修改为：$\pmb{a}_i=\begin{bmatrix}a_{1i}\\\vdots\\a_{mi}\end{bmatrix},(i=1,2,\cdots,n)$
     - 致谢：此错误由读者西交利物浦大学的周若骏同学指出，非常感谢。
 
 36. 位置：160页，倒数第7行末尾和倒数第6行开头部分
 
-    - 原文：它是向量 $$\pmb{a}$$ 的 $$l_2$$ 范数，
-    - 修改为：它是向量 $$\pmb{a}$$ 的 $$l_2$$ 范数平方，
+    - 原文：它是向量 $\pmb{a}$ 的 $l_2$ 范数，
+    - 修改为：它是向量 $\pmb{a}$ 的 $l_2$ 范数平方，
 
 37. 位置：161页，正文，第1行
 
@@ -299,23 +297,23 @@
 
 39. 位置：164页，正文，倒数第 2 行
 
-    - 原文：……正交投影量之后的残余量（在平面空间中即图3-4-4中所示的 $$\pmb{x}-\pmb{y}$$ ）。
+    - 原文：……正交投影量之后的残余量（在平面空间中即图3-4-4中所示的 $\pmb{x}-\pmb{y}$ ）。
     - 修改为：……正交投影量之后的残余量。
 
 40. 位置：168页，正文，第20行
 
-    - 原文：即 $$\pmb{v}_i=\pmb{v}_i\cdot\pmb{v}_i=\pmb{v}^{\rm{T}}\pmb{v}_i=1$$
-    - 修改为：即 $$\begin{Vmatrix}\pmb{v}_i\end{Vmatrix}^2=\pmb{v}_i\cdot\pmb{v}_i=\pmb{v}^{\rm{T}}\pmb{v}_i=1$$  
+    - 原文：即 $\pmb{v}_i=\pmb{v}_i\cdot\pmb{v}_i=\pmb{v}^{\rm{T}}\pmb{v}_i=1$
+    - 修改为：即 $\begin{Vmatrix}\pmb{v}_i\end{Vmatrix}^2=\pmb{v}_i\cdot\pmb{v}_i=\pmb{v}^{\rm{T}}\pmb{v}_i=1$  
 
 41. 位置：194页，图4-1-3之上的第三行
 
-    - 原文：$$\pmb{a} \times \pmb{b}=\begin{Vmatrix}\pmb{a} \end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}\sin\theta $$
-    - 修改为：$$\begin{Vmatrix}\pmb{a} \times \pmb{b}\end{Vmatrix}=\begin{Vmatrix}\pmb{a} \end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}\sin\theta $$
+    - 原文：$\pmb{a} \times \pmb{b}=\begin{Vmatrix}\pmb{a} \end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}\sin\theta $
+    - 修改为：$\begin{Vmatrix}\pmb{a} \times \pmb{b}\end{Vmatrix}=\begin{Vmatrix}\pmb{a} \end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}\sin\theta $
 
 42. 位置：216页，正文，第4行
 
-    - 原文： $$8x+10\le2800$$
-    - 修改为：$$8x+10y\le2800$$
+    - 原文： $8x+10\le2800$
+    - 修改为：$8x+10y\le2800$
 
 43. 位置：224页，正文，第4行
 
@@ -336,34 +334,34 @@
 
 46. 位置：250页，正文，第 2 行
 
-    - 原文：$$L_{\delta} = \begin{cases}\frac{1}{2}(y_i -\hat y_i)^2,\quad if \quad |y_i -\hat y|\le \delta\\\delta| y_i -\hat y_i|-\frac{1}{2}\delta^2,\quad 其他 \end{cases}$$
-    - 修改为：$$L_{\delta} = \begin{cases}\frac{1}{2}(y_i -\hat y_i)^2,\quad if \quad |y_i -\hat{y}_i|\le \delta\\\delta| y_i -\hat y_i|-\frac{1}{2}\delta^2,\quad 其他 \end{cases}$$
-    - 修改说明：将原文中的“ $$|y_i -\hat{y}_i|\le \delta$$ ”修改为“ $$|y_i -\hat{y}_i|\le \delta$$ ”
+    - 原文：$L_{\delta} = \begin{cases}\frac{1}{2}(y_i -\hat y_i)^2,\quad if \quad |y_i -\hat y|\le \delta\\\delta| y_i -\hat y_i|-\frac{1}{2}\delta^2,\quad 其他 \end{cases}$
+    - 修改为：$L_{\delta} = \begin{cases}\frac{1}{2}(y_i -\hat y_i)^2,\quad if \quad |y_i -\hat{y}_i|\le \delta\\\delta| y_i -\hat y_i|-\frac{1}{2}\delta^2,\quad 其他 \end{cases}$
+    - 修改说明：将原文中的“ $|y_i -\hat{y}_i|\le \delta$ ”修改为“ $|y_i -\hat{y}_i|\le \delta$ ”
 
 47. 位置：250页，正文，第 3 行
 
-    - 原文：如果 $$|\hat y_i - y_i| \le \delta$$ ，
-    - 修改为：如果 $$|y_i - \hat{y}_i| \le \delta$$ ，
+    - 原文：如果 $|\hat y_i - y_i| \le \delta$ ，
+    - 修改为：如果 $|y_i - \hat{y}_i| \le \delta$ ，
 
 48. 位置：254页，图4-4-4-14
 
-    - 修改说明：将图4-4-14中的纵坐标名称 $$f(x)$$ 修改为 $$f'(x)$$
+    - 修改说明：将图4-4-14中的纵坐标名称 $f(x)$ 修改为 $f'(x)$
 
 49. 位置：264页，倒数第 3 行
 
-    - 原文：例如 $$\{H\}$$ 就是
-    - 修改为：例如 $$H$$ 就是
+    - 原文：例如 $\{H\}$ 就是
+    - 修改为：例如 $H$ 就是
 
 50. 位置：270页，正文，倒数第 9 行
 
-    - 原文：（B3）：若 $$B \subset A$$ ，则 $$A \cap B = B$$ ，故 $$P(B|A)=\frac{P(B)}{P(A)} \ge 1$$
-    - 修改为：（B3）：若 $$B \subset A$$ ，则 $$A \cap B = B$$ ，故 $$P(B|A)=\frac{P(B)}{P(A)} \le 1$$
+    - 原文：（B3）：若 $B \subset A$ ，则 $A \cap B = B$ ，故 $P(B|A)=\frac{P(B)}{P(A)} \ge 1$
+    - 修改为：（B3）：若 $B \subset A$ ，则 $A \cap B = B$ ，故 $P(B|A)=\frac{P(B)}{P(A)} \le 1$
     - 致谢：本错误是由读者“开花一季”指出，非常感谢。  
 
 51. 位置：273页，倒数第 4 行
 
-    - 原文：$$P(B|A)=P(A)$$ 同样说明两个事件相互对立。
-    - 修改为：$$P(B|A)=P(A)$$ 同样说明两个事件相互独立。
+    - 原文：$P(B|A)=P(A)$ 同样说明两个事件相互对立。
+    - 修改为：$P(B|A)=P(A)$ 同样说明两个事件相互独立。
     - 修改说明：将原文中的“对立”修改为“独立”。
 
 52. 位置：277页，正文，第7行
@@ -373,13 +371,13 @@
 
 53. 位置：287页，正文，第 4 行
 
-    - 原文：（5.3.17）式就可以表示为 $$p_i=f(\pmb{\theta}^{\text{T}},\widetilde{\pmb{x}})$$
-    - 修改为：（5.3.17）式就可以表示为 $$p_i=f(\pmb{\theta}^{\text{T}},\widetilde{\pmb{x}}_i)$$
+    - 原文：（5.3.17）式就可以表示为 $p_i=f(\pmb{\theta}^{\text{T}},\widetilde{\pmb{x}})$
+    - 修改为：（5.3.17）式就可以表示为 $p_i=f(\pmb{\theta}^{\text{T}},\widetilde{\pmb{x}}_i)$
 
 54. 位置：287页，正文，（5.3.18）式：
 
-    - 原文：$$p_i=\frac{1}{1+\text{exp}(-\pmb{\theta}^{\text{T}}\widetilde{\pmb{x}})}$$
-    - 修改为：$$p_i=\frac{1}{1+\text{exp}(-\pmb{\theta}^{\text{T}}\widetilde{\pmb{x}}_i)}$$
+    - 原文：$p_i=\frac{1}{1+\text{exp}(-\pmb{\theta}^{\text{T}}\widetilde{\pmb{x}})}$
+    - 修改为：$p_i=\frac{1}{1+\text{exp}(-\pmb{\theta}^{\text{T}}\widetilde{\pmb{x}}_i)}$
 
 55. 位置：287页，正文，第6行（式（5.3.18）下一行）
 
@@ -388,18 +386,18 @@
 
 56. 位置：287页，正文，（5.3.19）式：
 
-    - 原文：$$L(D|\pmb{\theta})=P(y_1,y_2,\cdots,y_n|x_1,x_2,\cdots,\pmb{\theta})=\prod_{i=1}^n(p_i)^{y_i}(1-p_i)^{1-y_i}$$
-    - 修改为：$$L(\pmb{\theta}|D)=P(\pmb{\theta}|D)=\prod_{i=1}^n(p_i)^{y_i}(1-p_i)^{1-y_i}$$
+    - 原文：$L(D|\pmb{\theta})=P(y_1,y_2,\cdots,y_n|x_1,x_2,\cdots,\pmb{\theta})=\prod_{i=1}^n(p_i)^{y_i}(1-p_i)^{1-y_i}$
+    - 修改为：$L(\pmb{\theta}|D)=P(\pmb{\theta}|D)=\prod_{i=1}^n(p_i)^{y_i}(1-p_i)^{1-y_i}$
 
 57. 位置：298页，正文，第 1 行
 
-    - 原文：$$F(y) = P(Y \le y) = \begin{cases}1-e^{\lambda y} \quad &(y \gt 0)\\ 0 &(y\le 0)\end{cases}  $$ 
-    - 修改为：$$F(y) = P(Y \le y) = \begin{cases}1-e^{-\lambda y} \quad &(y \gt 0)\\ 0 &(y\le 0)\end{cases}  $$ 
+    - 原文：$F(y) = P(Y \le y) = \begin{cases}1-e^{\lambda y} \quad &(y \gt 0)\\ 0 &(y\le 0)\end{cases}  $ 
+    - 修改为：$F(y) = P(Y \le y) = \begin{cases}1-e^{-\lambda y} \quad &(y \gt 0)\\ 0 &(y\le 0)\end{cases}  $ 
 
 58. 位置：300页，正文，第 1 行
 
-    - 原文：$$\sigma$$ 为方差
-    - 修改为： $$\sigma$$ 为标准差
+    - 原文：$\sigma$ 为方差
+    - 修改为： $\sigma$ 为标准差
 
 59. 位置：311页，正文，倒数第 3 行
 
@@ -409,21 +407,21 @@
 
 60. 位置：314页，正文，第 11 行
 
-    - 原文： $$P\{X=x_i|Y=y_i\}=\frac{P(X=x_i,Y=y_i)}{P(Y=y_i)}=\frac{p_{ij}}{P(Y=y_i)}$$
-    -  修改为： $$P(X=x_i|Y=y_i)=\frac{P(X=x_i,Y=y_i)}{P(Y=y_i)}=\frac{p_{ij}}{P(Y=y_i)}$$
-    - 修改说明：将原文的 $$P\{X=x_i|Y=y_i\}$$ 修改为 $$P(X=x_i|Y=y_i)$$ 
+    - 原文： $P\{X=x_i|Y=y_i\}=\frac{P(X=x_i,Y=y_i)}{P(Y=y_i)}=\frac{p_{ij}}{P(Y=y_i)}$
+    -  修改为： $P(X=x_i|Y=y_i)=\frac{P(X=x_i,Y=y_i)}{P(Y=y_i)}=\frac{p_{ij}}{P(Y=y_i)}$
+    - 修改说明：将原文的 $P\{X=x_i|Y=y_i\}$ 修改为 $P(X=x_i|Y=y_i)$ 
 
 61. 位置：322页，正文，第 12 行
 
-    - 原文：$$200\times\frac{1}{4}+0\times\frac{1}{4}=50$$
-    - 修改为：$$200\times\frac{1}{4}+0\times\frac{3}{4}=50$$
+    - 原文：$200\times\frac{1}{4}+0\times\frac{1}{4}=50$
+    - 修改为：$200\times\frac{1}{4}+0\times\frac{3}{4}=50$
     - 致谢：此错误由读者鲸落指出，非常感谢。
 
 62. 位置：328页，正文，第 5 行
 
-    - 原文：$$\text{Var}(X)=\sum\limits_{k=1}^{\infty}\left(a_i-E(X)\right)^2p_i$$
-    - 修改为：$$\text{Var}(X)=\sum\limits_{i=1}^{\infty}\left(a_i-E(X)\right)^2p_i$$
-    - 修改说明：将原文中求和符号下面的 $$k$$ 修改为 $$i$$
+    - 原文：$\text{Var}(X)=\sum\limits_{k=1}^{\infty}\left(a_i-E(X)\right)^2p_i$
+    - 修改为：$\text{Var}(X)=\sum\limits_{i=1}^{\infty}\left(a_i-E(X)\right)^2p_i$
+    - 修改说明：将原文中求和符号下面的 $k$ 修改为 $i$
     - 致谢：此错误由读者鲸落指出，非常感谢。
 
 63. 位置：328页，正文，第 11 行，即（5.5.7）式之上的推导过程
@@ -457,8 +455,8 @@
 
 66. 位置：334页，正文，第 10 行
 
-    - 原文：$$\text{Var}(Y)+\text{Var}(-b_0X)+2\text{Cov}(X,-2b_0X)$$ （根据协方差的性质（C6））
-    - 修改为：$$\text{Var}(Y)+\text{Var}(-b_0X)+2\text{Cov}(X,-b_0X)$$ （根据协方差的性质（G6）））
+    - 原文：$\text{Var}(Y)+\text{Var}(-b_0X)+2\text{Cov}(X,-2b_0X)$ （根据协方差的性质（C6））
+    - 修改为：$\text{Var}(Y)+\text{Var}(-b_0X)+2\text{Cov}(X,-b_0X)$ （根据协方差的性质（G6）））
 
 67. 位置：334页，正文，倒数第 2 行
 
@@ -467,36 +465,36 @@
 
 68. 位置：338页，正文，第 2 行
 
-    - 原文：其中，$$\overline x = \frac{1}{n}\sum_{i=1}^nx_i, \overline y = \frac{1}{n}y_i$$ 。
-    - 修改为：其中，$$\overline x = \frac{1}{n}\sum_{i=1}^nx_i, \overline y = \frac{1}{n}\sum_{i=1}^ny_i$$ 。
+    - 原文：其中，$\overline x = \frac{1}{n}\sum_{i=1}^nx_i, \overline y = \frac{1}{n}y_i$ 。
+    - 修改为：其中，$\overline x = \frac{1}{n}\sum_{i=1}^nx_i, \overline y = \frac{1}{n}\sum_{i=1}^ny_i$ 。
     - 致谢：此错误由读者西交利物浦大学的周若骏同学指出，非常感谢。
 
 69. 位置：339页，正文，倒数第 4 行（略去表格）
 
-    - 原文：$$(x_i^r,y_i^r)$$ 的顺序组成一队，
-    - 修改为：$$(x_i^r,y_i^r)$$ 的顺序组成一对，
+    - 原文：$(x_i^r,y_i^r)$ 的顺序组成一队，
+    - 修改为：$(x_i^r,y_i^r)$ 的顺序组成一对，
 
 70. 位置：357页，正文，倒数第 4 行（公式）
 
-    - 原文：$$\text{log}L=\sum_{i=1}^n\text{log}f(x_i;\theta_i,\cdots,\theta_k)$$
-    - 修改为：$$\text{log}L=\sum_{i=1}^n\text{log}f(x_i;\theta_1,\cdots,\theta_k)$$
-    - 修改说明：原文中的 $$\theta_i$$ 的角标 $$i$$ 修改为 $$1$$
+    - 原文：$\text{log}L=\sum_{i=1}^n\text{log}f(x_i;\theta_i,\cdots,\theta_k)$
+    - 修改为：$\text{log}L=\sum_{i=1}^n\text{log}f(x_i;\theta_1,\cdots,\theta_k)$
+    - 修改说明：原文中的 $\theta_i$ 的角标 $i$ 修改为 1$
 
 71. 位置：368页，正文，（6.2.18）式之下的第 1 行
 
-    - 原文：若 $$\text{Var}(\hat{\theta}_1)\le\text{Var}(\hat{\theta})$$ ，
-    - 修改为：若 $$\text{Var}(\hat{\theta}_1)\le\text{Var}(\hat{\theta}_2)$$ ，
-    - 修改说明：原文中第二个 $$\theta$$ 增加下角标 $$2$$
+    - 原文：若 $\text{Var}(\hat{\theta}_1)\le\text{Var}(\hat{\theta})$ ，
+    - 修改为：若 $\text{Var}(\hat{\theta}_1)\le\text{Var}(\hat{\theta}_2)$ ，
+    - 修改说明：原文中第二个 $\theta$ 增加下角标 2$
 
 72. 位置：375页，正文，第 12 行
 
-    - 原文：则有 $$\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 0.3^2)$$ （参见 6.3 节的 （6.3.1）式），
-    - 修改为：原文：则有 $$\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 1^2)$$ （参见 6.3 节的 （6.3.2）式），
+    - 原文：则有 $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 0.3^2)$ （参见 6.3 节的 （6.3.1）式），
+    - 修改为：原文：则有 $\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 1^2)$ （参见 6.3 节的 （6.3.2）式），
 
 73. 位置：376页，正文，倒数 第 6 行（式子（6.4.2）之上第 2 行）
 
-    - 原文：$$Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 0.3^2)$$
-    - 修改为： $$Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 1^2)$$
+    - 原文：$Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 0.3^2)$
+    - 修改为： $Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0, 1^2)$
 
 74. 位置：382页，正文，第 1 行
 
@@ -506,18 +504,18 @@
 
 75. 位置：387页，正文，第 5 行
 
-    - 原文：并且 $$n\hat{p}_1=56<5$$ ，$$m\hat{p}_2=142<5$$ ，
-    - 修改为：并且 $$n\hat{p}_1=56>5$$ ，$$m\hat{p}_2=142>5$$ ，
+    - 原文：并且 $n\hat{p}_1=56<5$ ，$m\hat{p}_2=142<5$ ，
+    - 修改为：并且 $n\hat{p}_1=56>5$ ，$m\hat{p}_2=142>5$ ，
 
 76. 位置：387页，正文，第 9 行
 
-    - 原文：由于 $$|\eta|=6.1133<1.96$$ ，
-    - 修改为：由于 $$|\eta|=6.1133>1.96$$ ，
+    - 原文：由于 $|\eta|=6.1133<1.96$ ，
+    - 修改为：由于 $|\eta|=6.1133>1.96$ ，
 
 77. 位置：393页，正文，倒数第 6 行（公式（6.5.8）之上第 2 行）
 
-    - 原文：…… 是泊松分布中的 $$\alpha$$ 无偏估计，
-    - 修改为：…… 是泊松分布中的 $$\lambda$$ 无偏估计，
+    - 原文：…… 是泊松分布中的 $\alpha$ 无偏估计，
+    - 修改为：…… 是泊松分布中的 $\lambda$ 无偏估计，
 
 78. 位置：397页，正文，第 1 行
 
@@ -552,9 +550,9 @@
 
       $$D_{KL}(P\parallel Q) = \sum_{x\in\displaystyle{\mathcal{X}}}P(x)Z=E_{P}(Z)=E_P( -\log(Q(x))-[-\log(P(x))])  $$           （7.4.4）
 
-      这说明相对熵是按概率 $$P(x)$$ 损失的信息的期望……
+      这说明相对熵是按概率 P(x)$ 损失的信息的期望……
 
-    - 修改说明：将原文中大写的 $$X$$ 修改为小写的 $$x$$
+    - 修改说明：将原文中大写的 $X$ 修改为小写的 x$
 
 81. 位置：411页，正文，公式（7.4.5）式
 
@@ -562,15 +560,15 @@
 
       $$D_{KL}(P\parallel Q)=E_P\begin{bmatrix}\log\left(\frac{P(X)}{Q(X)}\right)\end{bmatrix}  $$           （7.4.5）
 
-      其含义为按概率 $$P(X)$$  的 $$P$$ 和 $$Q$$ 的对数商的期望。
+      其含义为按概率 $P(X)$  的 $P$ 和 $Q$ 的对数商的期望。
 
     - 修改为：
 
       $$D_{KL}(P\parallel Q)=E_P\begin{bmatrix}\log\left(\frac{P(x)}{Q(x)}\right)\end{bmatrix}  $$           （7.4.5）
 
-      其含义为按概率 $$P(x)$$  的 $$P$$ 和 $$Q$$ 的对数商的期望。
+      其含义为按概率 $P(x)$  的 $P$ 和 $Q$ 的对数商的期望。
 
-    - 修改说明：将原文中大写的 $$X$$ 修改为小写的 $$x$$
+    - 修改说明：将原文中大写的 $X$ 修改为小写的 $x$
 
 82. 位置：412页，正文，第 8 行
 
@@ -579,13 +577,13 @@
 
 83. 位置：412页，正文，第 10 行
 
-    - 原文：$$\text{H}_1(\pmb{y}\parallel\hat{\pmb{y}}_1) =-[1\cdot\log0.775+0\cdot\log0.116+0\cdot\log0.039+0\cdot\log0.070] \approx 0.3677$$
-    - 修改为：$$\text{H}_1(\pmb{y},\hat{\pmb{y}}_1) =-[1\cdot\log0.775+0\cdot\log0.116+0\cdot\log0.039+0\cdot\log0.070] \approx 0.3677$$
+    - 原文：$\text{H}_1(\pmb{y}\parallel\hat{\pmb{y}}_1) =-[1\cdot\log0.775+0\cdot\log0.116+0\cdot\log0.039+0\cdot\log0.070] \approx 0.3677$
+    - 修改为：$\text{H}_1(\pmb{y},\hat{\pmb{y}}_1) =-[1\cdot\log0.775+0\cdot\log0.116+0\cdot\log0.039+0\cdot\log0.070] \approx 0.3677$
 
 84. 位置：412页，正文，第 12 行
 
-    - 原文：$$\text{H}_2(\pmb{y}\parallel\hat{\pmb{y}}_2) = -\log0.938 \approx 0.0923$$
-    - 修改为：$$\text{H}_2(\pmb{y},\hat{\pmb{y}}_2) = -\log0.938 \approx 0.0923$$
+    - 原文：$\text{H}_2(\pmb{y}\parallel\hat{\pmb{y}}_2) = -\log0.938 \approx 0.0923$
+    - 修改为：$\text{H}_2(\pmb{y},\hat{\pmb{y}}_2) = -\log0.938 \approx 0.0923$
 
 85. 位置：412页，正文，第 13 行
 
@@ -594,8 +592,8 @@
 
 86. 位置：413页，公式（7.4.10）
 
-    - 原文：$$C =- \frac{1}{N} \sum_{i=1}^N[y_i\log(q_i) + (1-y)\log(1-q_i)  \quad\quad$$ （7.4.10）
-    - 修改为：$$C =- \frac{1}{N} \sum_{i=1}^N[y_i\log(q_i) +(1-y_i)\log(1-q_i)]  \quad\quad$$ （7.4.10）
+    - 原文：$C =- \frac{1}{N} \sum_{i=1}^N[y_i\log(q_i) + (1-y)\log(1-q_i)  \quad\quad$ （7.4.10）
+    - 修改为：$C =- \frac{1}{N} \sum_{i=1}^N[y_i\log(q_i) +(1-y_i)\log(1-q_i)]  \quad\quad$ （7.4.10）
 
 87. 位置：413页，正文，第 6 行
 
@@ -604,26 +602,26 @@
 
 88. 位置：416页，正文，公式（7.6.2）
 
-    - 原文：$$\text{H}(\pmb{X})=-\int f({x})\log(f({x}))d{x} \qquad$$       (7.6.2)
-    - 修改为：$$\text{H}(\pmb{X})=-\int f(\pmb{x})\log(f(\pmb{x}))d\pmb{x} \qquad$$       (7.6.2)
+    - 原文：$\text{H}(\pmb{X})=-\int f({x})\log(f({x}))d{x} \qquad$       (7.6.2)
+    - 修改为：$\text{H}(\pmb{X})=-\int f(\pmb{x})\log(f(\pmb{x}))d\pmb{x} \qquad$       (7.6.2)
     - 修改说明：将原文中小写 $$x$$ 加粗
 
 ## 2022年9月第2次印刷
 
 1. 位置：52页，正文第 4 行
 
-   - 原文：在 1.4.1 中曾有一个这样的内积函数： $$\langle\pmb{u},\pmb{v}\rangle=x_1y_1+4x_2y_2$$ ，
-   - 修改为：设内积函数：$$\langle\pmb{u},\pmb{v}\rangle=x_1x_2+4y_1y_2$$ ，
+   - 原文：在 1.4.1 中曾有一个这样的内积函数： $\langle\pmb{u},\pmb{v}\rangle=x_1y_1+4x_2y_2$ ，
+   - 修改为：设内积函数：$\langle\pmb{u},\pmb{v}\rangle=x_1x_2+4y_1y_2$ ，
 
 2. 位置：68页，正文，第 14 行
-   - 原文：$$\pmb{A}^2=\begin{bmatrix}1&-2\\-1&0\end{bmatrix}\begin{bmatrix}1&-2\\-1&0\end{bmatrix}=\begin{bmatrix}1&-2\\-1&0\end{bmatrix}=\begin{bmatrix}3&-2\\-1&2\end{bmatrix}$$
-   - 修改为：$$\pmb{A}^2=\begin{bmatrix}1&-2\\-1&0\end{bmatrix}\begin{bmatrix}1&-2\\-1&0\end{bmatrix}=\begin{bmatrix}3&-2\\-1&2\end{bmatrix}$$
+   - 原文：$\pmb{A}^2=\begin{bmatrix}1&-2\\-1&0\end{bmatrix}\begin{bmatrix}1&-2\\-1&0\end{bmatrix}=\begin{bmatrix}1&-2\\-1&0\end{bmatrix}=\begin{bmatrix}3&-2\\-1&2\end{bmatrix}$
+   - 修改为：$\pmb{A}^2=\begin{bmatrix}1&-2\\-1&0\end{bmatrix}\begin{bmatrix}1&-2\\-1&0\end{bmatrix}=\begin{bmatrix}3&-2\\-1&2\end{bmatrix}$
    - 致谢：感谢网名为春的读者指出此错误。
 
 3. 位置：75页，正文，第 3 行
-   - 原文：那么经过线性映射之后，$$\begin{bmatrix}1&-1&1\\0&0&2\end{bmatrix}\begin{bmatrix}1\\2\\1\end{bmatrix}=\begin{bmatrix}-1\\2\end{bmatrix}$$ ，
-   - 修改为：那么经过线性映射之后，$$\begin{bmatrix}1&-1&0\\0&0&2\end{bmatrix}\begin{bmatrix}1\\2\\1\end{bmatrix}=\begin{bmatrix}-1\\2\end{bmatrix}$$ ，
-   - 修改说明：原文中的矩阵 $$\begin{bmatrix}1&-1&1\\0&0&2\end{bmatrix}$$ 修改为 $$\begin{bmatrix}1&-1&0\\0&0&2\end{bmatrix}$$（原来的第1行第3列的数字 $$1$$ ，修改为 $$0$$）
+   - 原文：那么经过线性映射之后，$\begin{bmatrix}1&-1&1\\0&0&2\end{bmatrix}\begin{bmatrix}1\\2\\1\end{bmatrix}=\begin{bmatrix}-1\\2\end{bmatrix}$ ，
+   - 修改为：那么经过线性映射之后，$\begin{bmatrix}1&-1&0\\0&0&2\end{bmatrix}\begin{bmatrix}1\\2\\1\end{bmatrix}=\begin{bmatrix}-1\\2\end{bmatrix}$ ，
+   - 修改说明：原文中的矩阵 $\begin{bmatrix}1&-1&1\\0&0&2\end{bmatrix}$ 修改为 $\begin{bmatrix}1&-1&0\\0&0&2\end{bmatrix}$（原来的第1行第3列的数字 $1$ ，修改为 0$）
    - 致谢：感谢网名为春的读者指出此错误。
 
 4. 位置：101页，第二段代码
@@ -659,6 +657,12 @@
 
    - 致谢：感谢网名为春的读者指出此错误。
 
+5. 位置：133页，正文，第 2 行
+
+   - 原文：尽管两次的初始值差距交代
+   - 修改为：尽管两次的初始值差距较大
+   - 致谢：感谢读者孔祥松指出此错误。
+
 ----
 
 # 二、修改
@@ -667,11 +671,11 @@
 
 1. 位置：164页，公式（3.5.3）下第 2 行开始，到公式（3.5.4）所在的行为止。
 
-   - 说明：这一段内容旨在推导 $$\pmb{q}^{\rm{T}}_i\pmb{a}_j=r_{ij}$$ 的结果，原文的推导过程中使用了求和符号，这种记法虽然简介，但不利于不熟悉有关运算的读者理解，故修改如下（原文并没有错误，只是为了更便于理解，修改为下文内容）：
+   - 说明：这一段内容旨在推导 $\pmb{q}^{\rm{T}}_i\pmb{a}_j=r_{ij}$ 的结果，原文的推导过程中使用了求和符号，这种记法虽然简介，但不利于不熟悉有关运算的读者理解，故修改如下（原文并没有错误，只是为了更便于理解，修改为下文内容）：
 
    - 修改为：
 
-     在（3.5.3）式的两边都左乘 $$\pmb{q}_i^{\rm{T}}$$ ，请注意上面的假设条件：$$i\le j$$ ，即 $$i=1,2,\cdots,j-1$$ ，那么在（3.5.3）式中必然有 $$r_{ij}\pmb{q}_i$$ 项，得：
+     在（3.5.3）式的两边都左乘 $\pmb{q}_i^{\rm{T}}$ ，请注意上面的假设条件：$i\le j$ ，即 $i=1,2,\cdots,j-1$ ，那么在（3.5.3）式中必然有 $r_{ij}\pmb{q}_i$ 项，得：
 
      $$\pmb{q}^{\rm{T}}_i\pmb{a}_j=\pmb{q}^{\rm{T}}_i(r_{1j}\pmb{q}_1+r_{2j}\pmb{q}_2+\cdots+r_{ij}\pmb{q}_i+\cdots+r_{jj}\pmb{q}_j)$$
 
@@ -683,3 +687,10 @@
 
      $$\pmb{q}_i^{\rm{T}}\pmb{a}_j=r_{ij},\quad(i=1,2,\cdots,j-1)$$                （3.5.4）
 
+----
+
+《机器学习数学基础》，电子工业出版社出版。
+
+本书在线支持网站：https://github.com/qiwsir/Math4ML_book
+
+![](./images/math4ML.png)

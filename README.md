@@ -8,19 +8,14 @@
 
 - 本书目前最新印次：2022年9月第2次印刷
 
+## 勘误和修改
+
+- Github 上的 Markdown 文档：https://github.com/qiwsir/Math4ML_book/blob/main/corrigendum.md
+- 百度网盘下载 PDF 文档：链接: https://pan.baidu.com/s/19r4amoIktFv6X9d6wJZoXg 提取码: svur
+
 ## 配套视频课程
 
 - 博文视点学院：[机器学习数学基础视频教程](https://appqtulvsie4217.pc.xiaoe-tech.com/detail/p_6243c2a9e4b01c509a9c1c8e/6)
-
-----
-
-**说明：** 本站的公式若无法显示，请依次尝试如下方法：
-
-1. 再次刷新页面；若还无法显示，进入第 2 步。
-
-2. 分别在移动端和计算机终端都试试，或者换个网络。如果依然无法显示公式，我就无能为力了，只能说因为**不可抗力**的原因，看不到本站的公式。
-
-3. 浏览器也可能是导致无法显示公式原因。
 
 
 ## 本书介绍
@@ -202,15 +197,14 @@
 本书中的源码是使用 Python 语言，并基于 Jupyter 演示。对 Jupyter 以及有关 Python 等语言不熟悉的读者，请参阅如下相关资料：
 
 - 学习 Python 语言的资料（以下任选一项或多项）
-  - 书籍：[跟老齐学 Python：轻松入门](http://www.itdiffer.com/learn_python.html)
-  - 书籍：[Python 大学实用教程](http://www.itdiffer.com/python_course.html)
-  - 视频课程：[零基础掌握 Python 入门到实战](https://edu.csdn.net/course/detail/26676)
-
+  - 书籍：[Python 完全自学教程](https://github.com/qiwsir/PythonTutorialForSelf-learners)（本书为免费开源图书）
+  - 与《Python 完全自学教程》配套的视频课程：https://bfw.xet.tech/s/3cMBcz
+  - 书籍：[跟老齐学 Python：轻松入门](https://github.com/qiwsir/itdiffer/blob/main/learn_python.md)
+  - 书籍：[Python 大学实用教程](https://github.com/qiwsir/itdiffer/blob/main/python_course.md)
 - 学习 Jupyter 以及 NumPy、Pandas、Scikit-learn 等机器学习常用工具的资料：
-  - 书籍：[跟老齐学 Python：数据分析](http://www.itdiffer.com/data.html)
-  - 书籍：[数据准备和特征工程](http://www.itdiffer.com/feature.html)
+  - 书籍：[跟老齐学 Python：数据分析](https://github.com/qiwsir/itdiffer/blob/main/data.md)
+  - 书籍：[数据准备和特征工程](https://github.com/qiwsir/itdiffer/blob/main/feature.md)
   - 视频课程：[迈向数据科学家：带你玩转 Python 数据分析](https://edu.csdn.net/course/detail/27814)
-
 - 其他有关资料：
   - [线性代数的学习方法](https://mp.weixin.qq.com/s/AbfoSd8Xx86bmmAxzM8RRQ)
   - [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
