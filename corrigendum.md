@@ -1,6 +1,6 @@
 # 《机器学习数学基础》勘误和修改
 
-**[下载本页的 PDF 版](./images/corrigendum221129.pdf)**
+**[下载本页的 PDF 版](./images/corrigendum221202.pdf)**
 
 说明：
 

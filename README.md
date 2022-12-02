@@ -11,7 +11,7 @@
 ## 勘误和修改
 
 - Github 上的 Markdown 文档：https://github.com/qiwsir/Math4ML_book/blob/main/corrigendum.md
-- 百度网盘下载 PDF 文档：链接: https://pan.baidu.com/s/19r4amoIktFv6X9d6wJZoXg 提取码: svur
+- 百度网盘下载 PDF 文档：链接: https://pan.baidu.com/s/1OOimHFaTJ-CxmeCvnADFPQ 提取码: d3a5
 
 ## 配套视频课程
 
