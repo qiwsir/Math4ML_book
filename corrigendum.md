@@ -1,6 +1,6 @@
 # 《机器学习数学基础》勘误和修改
 
-**[下载本页的 PDF 版](./images/corrigendum221203.pdf)**
+**[下载本页的 PDF 版](./images/corrigendum221204.pdf)**
 
 说明：
 
@@ -680,7 +680,26 @@
      \begin{split}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} &= \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h2_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h2_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h2_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{split}\tag{4.4.32}
      $$
 
-   - 修改说明：第二个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $$\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$$
+   - 修改说明：第二个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $$\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$$ 
+
+8. 位置：201页，第 4 行
+
+   - 原文：$\left(\frac{f}{g}\right)=\frac{f^\prime g-fg^\prime}{g^2}$
+   - 修改为：$\left(\frac{f}{g}\right)^\prime=\frac{f^\prime g-fg^\prime}{g^2}$
+   - 致谢：感谢读者孔祥松指出此错误。
+
+9. 位置：217页，第 3 行
+
+   - 原文： $8x+10\le2800$
+   - 修改为：$8x+10y\le2800$
+   - 致谢：感谢读者孔祥松指出此错误。
+
+10. 位置：219页，公式（4.3.4）
+
+   - 原文：$F(\pmb{x})=\pmb{Ax}-\pmb{b}^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
+   - 修改为：$F(\pmb{x})=(\pmb{Ax}-\pmb{b})^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
+   - 修改说明：将 $\pmb{Ax}-\pmb{b}^2$ 改为 $(\pmb{Ax}-\pmb{b})^2$
+   - 致谢：感谢读者孔祥松指出此错误。
 
 ----
 
