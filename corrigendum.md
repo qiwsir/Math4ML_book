@@ -149,8 +149,8 @@
 
 18. 位置：64页，正文，倒数第5行
 
-    - 原文：如果用一个标量 $$c$$ 乘以矩阵，此计算结果仍然是与原矩阵形状一样的矩阵，遵从乘法封闭的原则。
-    - 修改为：如果用一个标量 $$c$$ 乘以矩阵，此计算结果仍然是与原矩阵形状一样的矩阵，遵从数量乘法封闭的原则。
+    - 原文：如果用一个标量 $c$ 乘以矩阵，此计算结果仍然是与原矩阵形状一样的矩阵，遵从乘法封闭的原则。
+    - 修改为：如果用一个标量 $c$ 乘以矩阵，此计算结果仍然是与原矩阵形状一样的矩阵，遵从数量乘法封闭的原则。
     - 修改说明：将“遵从乘法封闭的原则”，修改为“遵从数量乘法封闭的原则”。
 
 19. 位置：71页，正文第10行、第11行
@@ -604,7 +604,7 @@
 
     - 原文：$\text{H}(\pmb{X})=-\int f({x})\log(f({x}))d{x} \qquad$       (7.6.2)
     - 修改为：$\text{H}(\pmb{X})=-\int f(\pmb{x})\log(f(\pmb{x}))d\pmb{x} \qquad$       (7.6.2)
-    - 修改说明：将原文中小写 $$x$$ 加粗
+    - 修改说明：将原文中小写 $x$ 加粗
 
 ## 2022年9月第2次印刷
 
@@ -680,7 +680,7 @@
      \begin{split}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} &= \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h2_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h2_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h2_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{split}\tag{4.4.32}
      $$
 
-   - 修改说明：第二个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $$\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$$ 
+   - 修改说明：第二个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
 
 8. 位置：201页，第 4 行
 
