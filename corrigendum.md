@@ -1,6 +1,6 @@
 # 《机器学习数学基础》勘误和修改
 
-**[下载本页的 PDF 版](./images/corrigendum221204.pdf)**
+**[下载本页的 PDF 版](./images/corrigendum221212.pdf)**
 
 说明：
 
@@ -657,18 +657,30 @@
 
    - 致谢：感谢网名为春的读者指出此错误。
 
-5. 位置：133页，正文，第 2 行
+5. 位置：127页，正文，倒数第 2 行
+
+   - 原文：则为： $f(\lambda)=\lambda^2-\text{Tr}(\pmb{A})+|\pmb{A}|$
+   - 修改为：则为： $f(\lambda)=\lambda^2-\text{Tr}(\pmb{A})\lambda+|\pmb{A}|$
+   - 致谢：感谢网名为春的读者指出此错误。
+
+6. 位置：128页，正文，小节标题“3.1.3 一般性质” 之上第 3 行
+
+   - 原文：$\text{Tr}(\pmb{A})=\text{Tr}(\pmb{A}^{\text{T}})$
+   - 修改：删除此行。因为与此处性质中的第 1 项重复。
+   - 致谢：感谢网名为春的读者指出此错误。
+
+7. 位置：133页，正文，第 2 行
 
    - 原文：尽管两次的初始值差距交代
    - 修改为：尽管两次的初始值差距较大
    - 致谢：感谢读者孔祥松指出此错误。
 
-6. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
+8. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
 
    - 原文：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}$ 表示 $l_2$ 范数，
    - 修改为：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}^2$ 表示 $l_2$ 范数，
 
-7. 位置：246页，公式（4.4.32）
+9. 位置：246页，公式（4.4.32）
 
    - 原文：
      $$
@@ -682,24 +694,24 @@
 
    - 修改说明：第二个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
 
-8. 位置：201页，第 4 行
+10. 位置：201页，第 4 行
 
    - 原文：$\left(\frac{f}{g}\right)=\frac{f^\prime g-fg^\prime}{g^2}$
    - 修改为：$\left(\frac{f}{g}\right)^\prime=\frac{f^\prime g-fg^\prime}{g^2}$
    - 致谢：感谢读者孔祥松指出此错误。
 
-9. 位置：217页，第 3 行
+11. 位置：217页，第 3 行
 
-   - 原文： $8x+10\le2800$
-   - 修改为：$8x+10y\le2800$
-   - 致谢：感谢读者孔祥松指出此错误。
+    - 原文： $8x+10\le2800$
+    - 修改为：$8x+10y\le2800$
+    - 致谢：感谢读者孔祥松指出此错误。
 
-10. 位置：219页，公式（4.3.4）
+12. 位置：219页，公式（4.3.4）
 
-   - 原文：$F(\pmb{x})=\pmb{Ax}-\pmb{b}^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
-   - 修改为：$F(\pmb{x})=(\pmb{Ax}-\pmb{b})^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
-   - 修改说明：将 $\pmb{Ax}-\pmb{b}^2$ 改为 $(\pmb{Ax}-\pmb{b})^2$
-   - 致谢：感谢读者孔祥松指出此错误。
+    - 原文：$F(\pmb{x})=\pmb{Ax}-\pmb{b}^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
+    - 修改为：$F(\pmb{x})=(\pmb{Ax}-\pmb{b})^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
+    - 修改说明：将 $\pmb{Ax}-\pmb{b}^2$ 改为 $(\pmb{Ax}-\pmb{b})^2$
+    - 致谢：感谢读者孔祥松指出此错误。
 
 ----
 
