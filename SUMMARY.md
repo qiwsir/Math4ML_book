@@ -82,7 +82,7 @@
 
 * [机器学习专题](machinelearning.md)
 
-  * [费雪的线性判别分析](fisher-lda.md)
+  * [费雪的线性判别分析](fisher-lda.pdf)
   
   * [用贝叶斯定理理解线性判别分析](bayes-lda.md)
   
