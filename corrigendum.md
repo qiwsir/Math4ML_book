@@ -7,9 +7,9 @@
 - 阅读2022年3月第1次印刷的读者，请参考以下勘误中的所有内容，也包括第2次印刷。
 - 阅读2022年9月第2次印刷的读者，请仅参考**2022年9月第2次印刷**以下的勘误。
 
-# 一、勘误
+## 一、勘误
 
-## 2022年3月第1次印刷
+### 2022年3月第1次印刷
 
 1. 位置：29页，正文倒数第3行至最后
 
@@ -542,30 +542,34 @@
 
     - 原文：
 
-      $$D_{KL}(P\parallel Q) = \sum_{x\in\displaystyle{\mathcal{X}}}P(x)Z=E_{P}(Z)=E_P( -\log(Q(X))-[-\log(P(X))])  $$           （7.4.4）
-
+      $$
+      D_{KL}(P\parallel Q) = \sum_{x\in\displaystyle{\mathcal{X}}}P(x)Z=E_{P}(Z)=E_P( -\log(Q(X))-[-\log(P(X))])\tag{7.4.4}
+      $$
       这说明相对熵是按概率 $P(X)$ 损失的信息的期望……
 
     - 修改为：
 
-      $$D_{KL}(P\parallel Q) = \sum_{x\in\displaystyle{\mathcal{X}}}P(x)Z=E_{P}(Z)=E_P( -\log(Q(x))-[-\log(P(x))])  $$           （7.4.4）
+      $$
+      D_{KL}(P\parallel Q) = \sum_{x\in\displaystyle{\mathcal{X}}}P(x)Z=E_{P}(Z)=E_P( -\log(Q(x))-[-\log(P(x))])\tag{7.4.4}
+      $$
+      这说明相对熵是按概率 $P(x)$ 损失的信息的期望……
 
-      这说明相对熵是按概率 P(x)$ 损失的信息的期望……
-
-    - 修改说明：将原文中大写的 $X$ 修改为小写的 x$
+    - 修改说明：将原文中大写的 $X$ 修改为小写的 $x$
 
 81. 位置：411页，正文，公式（7.4.5）式
 
     - 原文：
 
-      $$D_{KL}(P\parallel Q)=E_P\begin{bmatrix}\log\left(\frac{P(X)}{Q(X)}\right)\end{bmatrix}  $$           （7.4.5）
-
+      $$
+      D_{KL}(P\parallel Q)=E_P\begin{bmatrix}\log\left(\frac{P(X)}{Q(X)}\right)\end{bmatrix}\tag{7.4.5}
+      $$
       其含义为按概率 $P(X)$  的 $P$ 和 $Q$ 的对数商的期望。
 
     - 修改为：
 
-      $$D_{KL}(P\parallel Q)=E_P\begin{bmatrix}\log\left(\frac{P(x)}{Q(x)}\right)\end{bmatrix}  $$           （7.4.5）
-
+      $$
+      D_{KL}(P\parallel Q)=E_P\begin{bmatrix}\log\left(\frac{P(x)}{Q(x)}\right)\end{bmatrix}\tag{7.4.5}
+      $$
       其含义为按概率 $P(x)$  的 $P$ 和 $Q$ 的对数商的期望。
 
     - 修改说明：将原文中大写的 $X$ 修改为小写的 $x$
@@ -606,7 +610,7 @@
     - 修改为：$\text{H}(\pmb{X})=-\int f(\pmb{x})\log(f(\pmb{x}))d\pmb{x} \qquad$       (7.6.2)
     - 修改说明：将原文中小写 $x$ 加粗
 
-## 2022年9月第2次印刷
+### 2022年9月第2次印刷
 
 1. 位置：52页，正文第 4 行
 
@@ -683,17 +687,21 @@
 9. 位置：246页，公式（4.4.32）
 
    - 原文：
+     
+     
      $$
      \begin{split}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} &= \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h1_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h1_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h1_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{split} \tag{4.4.32}
      $$
-
+     
    - 修改为：
+     
+     
      $$
      \begin{split}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} &= \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h2_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h2_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h2_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{split}\tag{4.4.32}
      $$
-
-   - 修改说明：第二个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
-
+     
+   - 修改说明：第一个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
+   
 10. 位置：201页，第 4 行
 
    - 原文：$\left(\frac{f}{g}\right)=\frac{f^\prime g-fg^\prime}{g^2}$
@@ -713,11 +721,11 @@
     - 修改说明：将 $\pmb{Ax}-\pmb{b}^2$ 改为 $(\pmb{Ax}-\pmb{b})^2$
     - 致谢：感谢读者孔祥松指出此错误。
 
-----
+-----
 
-# 二、修改
+## 二、修改
 
-## 2022年3月第1次印刷
+### 2022年3月第1次印刷
 
 1. 位置：164页，公式（3.5.3）下第 2 行开始，到公式（3.5.4）所在的行为止。
 
@@ -727,17 +735,23 @@
 
      在（3.5.3）式的两边都左乘 $\pmb{q}_i^{\rm{T}}$ ，请注意上面的假设条件：$i\le j$ ，即 $i=1,2,\cdots,j-1$ ，那么在（3.5.3）式中必然有 $r_{ij}\pmb{q}_i$ 项，得：
 
-     $$\pmb{q}^{\rm{T}}_i\pmb{a}_j=\pmb{q}^{\rm{T}}_i(r_{1j}\pmb{q}_1+r_{2j}\pmb{q}_2+\cdots+r_{ij}\pmb{q}_i+\cdots+r_{jj}\pmb{q}_j)$$
-
+     $$
+     \pmb{q}^{\rm{T}}_i\pmb{a}_j=\pmb{q}^{\rm{T}}_i(r_{1j}\pmb{q}_1+r_{2j}\pmb{q}_2+\cdots+r_{ij}\pmb{q}_i+\cdots+r_{jj}\pmb{q}_j)
+     $$
+     
+     
      利用（3.5.2）式，计算可得：
-
-     $$\begin{split}\pmb{q}^{\rm{T}}_i\pmb{a}_j&=\pmb{q}^{\rm{T}}_ir_{1j}\pmb{q}_1&&+\pmb{q}^{\rm{T}}_ir_{2j}\pmb{q}_2&&+\cdots&&+\pmb{q}^{\rm{T}}_ir_{ij}\pmb{q}_i&&+\cdots&&+\pmb{q}^{\rm{T}}_ir_{jj}\pmb{q}_j\\&=r_{1j}\pmb{q}^{\rm{T}}_i\pmb{q}_1&&+r_{2j}\pmb{q}^{\rm{T}}_i\pmb{q}_2&&+\cdots&&+r_{ij}\pmb{q}^{\rm{T}}_i\pmb{q}_i&&+\cdots&&+r_{jj}\pmb{q}^{\rm{T}}_i\pmb{q}_j\\&=0&&+0&&+\cdots&&+r_{ij}\cdot1&&+\cdots&&+0\\&=r_{ij}\end{split}$$
-
+     
+     $$
+     \begin{split}\pmb{q}^{\rm{T}}_i\pmb{a}_j&=\pmb{q}^{\rm{T}}_ir_{1j}\pmb{q}_1&&+\pmb{q}^{\rm{T}}_ir_{2j}\pmb{q}_2&&+\cdots&&+\pmb{q}^{\rm{T}}_ir_{ij}\pmb{q}_i&&+\cdots&&+\pmb{q}^{\rm{T}}_ir_{jj}\pmb{q}_j\\&=r_{1j}\pmb{q}^{\rm{T}}_i\pmb{q}_1&&+r_{2j}\pmb{q}^{\rm{T}}_i\pmb{q}_2&&+\cdots&&+r_{ij}\pmb{q}^{\rm{T}}_i\pmb{q}_i&&+\cdots&&+r_{jj}\pmb{q}^{\rm{T}}_i\pmb{q}_j\\&=0&&+0&&+\cdots&&+r_{ij}\cdot1&&+\cdots&&+0\\&=r_{ij}\end{split}
+     $$
      故：
+     
+     $$
+     \pmb{q}_i^{\rm{T}}\pmb{a}_j=r_{ij},\quad(i=1,2,\cdots,j-1)\tag{3.5.4}
+     $$
 
-     $$\pmb{q}_i^{\rm{T}}\pmb{a}_j=r_{ij},\quad(i=1,2,\cdots,j-1)$$                （3.5.4）
-
-## 2022年9月第2次印刷
+### 2022年9月第2次印刷
 
 1. 位置：128页，3.1.3节中的列表项目。
    - 说明：本节总结了几条常用的与特征值和特征向量相关的性质，但此前的表述和符号不易理解，现修改如下。（将原文中的列表项用下面的列表项替换）

@@ -6,7 +6,7 @@
 
 **仿射**，是英文单词 **affine** 的中文翻译。
 
-单词 affine，读音：[ə'faɪn]。来自于英语affinity。英语词根fin来自于拉丁语finis，表示“边界，末端”，例如finish、final等单词。词头ad表示“去，往”，拼出名词affinity，本意为“接壤，结合”，用来指“姻亲，由于婚姻而产生的亲戚关系”，引申为“亲密关系，相似性”等$$^{[1]}$$。
+单词 affine，读音：[ə'faɪn]。来自于英语 affinity。英语词根 fin 来自于拉丁语 finis，表示“边界，末端”，例如finish、final 等单词。词头 ad 表示“去，往”，拼出名词 affinity，本意为“接壤，结合”，用来指“姻亲，由于婚姻而产生的亲戚关系”，引申为“亲密关系，相似性”等$$^{[1]}$$。
 
 中文名称“仿射”，有一种观点是**音译**，来自“affine geometry”中的“fine”和“geo”两部分，于是“仿射几何”就翻译出来了$$^{[2]}$$。
 
@@ -41,9 +41,10 @@
 
 以上变换的组合，也是线性变换。线性变换遵循着加法和乘法封闭原则，即：
 
-$$\begin{split}&L(p+q)=L(p)+L(q)\\&L(\alpha p)=\alpha L(p)\end{split}$$
-
-但是，平移不是线性变换（《机器学习数学基础》第2章2.2.1节）。如果将上述的线性变换与平移合并起来，则称为affine transformation，翻译为仿射变换$$^{[4]}$$。
+$$
+\begin{split}&L(p+q)=L(p)+L(q)\\&L(\alpha p)=\alpha L(p)\end{split}
+$$
+但是，平移不是线性变换（《机器学习数学基础》第2章2.2.1节）。如果将上述的线性变换与平移合并起来，则称为 affine transformation，翻译为仿射变换$$^{[4]}$$。
 
 ![](./images/images/2021-3-4/1614838163532-tran03.png)
 
@@ -61,44 +62,48 @@ $$\begin{split}&L(p+q)=L(p)+L(q)\\&L(\alpha p)=\alpha L(p)\end{split}$$
 
 仿射空间中没有特定的原点，因此不能将空间中的每一点和特定的向量对应起来。仿射空间中只有从一个点到另一个点的位移向量，或称平移向量。
 
-如果 $$\mathbb X$$ 是仿射空间，$$\pmb{a},\pmb{b}\in\mathbb{X}$$ ，那么从 $$\pmb{a}$$ 到 $$\pmb{b}$$ 的位移向量为 $$\pmb{b} − \pmb{a}$$ 。
+如果 $\mathbb X$ 是仿射空间，$\pmb{a},\pmb{b}\in\mathbb{X}$ ，那么从 $\pmb{a}$ 到 $\pmb{b}$ 的位移向量为 $\pmb{b} − \pmb{a}$ 。
 
 **所有向量空间都可看作仿射空间。**
 
-若 $$\mathbb{X}$$ 是向量空间，$$\pmb{L}\in\mathbb{X}$$ 是向量子空间，$$\pmb{a}\in\mathbb{X}$$ ，则 $$\pmb{a}+\pmb{L}=\{a+l:l\in\pmb{L}\}$$ 是仿射空间。这里的 $$\pmb{a}$$ 也称为平移向量。
+若 $\mathbb{X}$ 是向量空间，$\pmb{L}\in\mathbb{X}$ 是向量子空间，$\pmb{a}\in\mathbb{X}$ ，则 $\pmb{a}+\pmb{L}=\{a+l:l\in\pmb{L}\}$ 是仿射空间。这里的 $\pmb{a}$ 也称为平移向量。
 
-若向量空间 $$\mathbb{X}$$ 的维度是 $$n\lt\infty$$ ，那么 $$\mathbb{X}$$ 的仿射子空间也可看作一组非齐次线性方程的解；而齐次方程的解永远是线性子空间，也就是说齐次方程的解永远包含零解。维度为 $$n − 1$$ 的仿射空间也叫做仿射超平面。 
+若向量空间 $\mathbb{X}$ 的维度是 $n\lt\infty$ ，那么 $\mathbb{X}$ 的仿射子空间也可看作一组非齐次线性方程的解；而齐次方程的解永远是线性子空间，也就是说齐次方程的解永远包含零解。维度为 $$n − 1$$ 的仿射空间也叫做仿射超平面。 
 
 ## 仿射变换
 
 **仿射变换**（affine transformation），又称**仿射映射**，是对一个向量空间进行一次线性变换并接上一个平移，变换为另一个向量空间。即：
-
-$$\pmb{y}=\pmb{Ax}+\pmb{b}$$
-
+$$
+\pmb{y}=\pmb{Ax}+\pmb{b}
+$$
 平移变换不能用矩阵表示，为此使用齐次坐标系（《机器学习数学基础》第2章2.2.4节）。
 
 ### 仿射变换的性质
 
-设 $$f(\pmb{x})=\pmb{Ax}+\pmb{b}$$ 是一个仿射变换，则 $$f$$ 具有：
+设 $f(\pmb{x})=\pmb{Ax}+\pmb{b}$ 是一个仿射变换，则 $f$ 具有：
 
 1. 直线到直线的映射
 2. 原来平行的直线变换之后仍然平行
 
 **证明**
 
-1. 设直线 $$l:\pmb{p}+t\pmb{u},t\in\mathbb{R}$$ ，则：
+1. 设直线 $l:\pmb{p}+t\pmb{u},t\in\mathbb{R}$ ，则：
 
-   $$f(\pmb{p}+t\pmb{u})=\pmb{A}(\pmb{p}+t\pmb{u})+\pmb{b}=(\pmb{Ap}+\pmb{b})+t(\pmb{Au})=\pmb{p}_1+t\pmb{u}_1$$
+   $$
+   f(\pmb{p}+t\pmb{u})=\pmb{A}(\pmb{p}+t\pmb{u})+\pmb{b}=(\pmb{Ap}+\pmb{b})+t(\pmb{Au})=\pmb{p}_1+t\pmb{u}_1
+   $$
+   其中 $\pmb{p}_1=\pmb{Ap}+\pmb{b}$ ，$\pmb{u_1}=\pmb{Au}$ ，则 $f(l)=l_1, l_1:\pmb{p}_1+t\pmb{u}_1,t\in\mathbb{R}$ 仍然是直线。
 
-   其中 $$\pmb{p}_1=\pmb{Ap}+\pmb{b}$$ ，$$\pmb{u_1}=\pmb{Au}$$ ，则 $$f(l)=l_1, l_1:\pmb{p}_1+t\pmb{u}_1,t\in\mathbb{R}$$ 仍然是直线。
+2. 设 $l:\pmb{p}+t\pmb{u}$ 和 $m:\pmb{q}+t\pmb{v}$ 是平行线，则 $\pmb{v}=k\pmb{u},k\in\mathbb{R}$ ，所以：
 
-2. 设 $$l:\pmb{p}+t\pmb{u}$$ 和 $$m:\pmb{q}+t\pmb{v}$$ 是平行线，则 $$\pmb{v}=k\pmb{u},k\in\mathbb{R}$$ ，所以：
-
-   $$f(\pmb{p}+t\pmb{u})=\pmb{A}(\pmb{p}+t\pmb{u})+\pmb{b}=(\pmb{Ap}+\pmb{b})+t(\pmb{Au})=\pmb{p}_1+t\pmb{u}_1$$
-
-   $$\begin{split}f(\pmb{q}+t\pmb{v})&=f(\pmb{q}+t(k\pmb{u}))\\&=\pmb{A}(\pmb{q}+t(k\pmb{u}))+\pmb{b}\\&=(\pmb{Aq}+\pmb{b})+t(\pmb{A}k\pmb{u)}\\&=\pmb{q}_1+t(k\pmb{u}_1)\end{split}$$
-
-   故，变换之后所得 $$l_1:\pmb{p}_1+t\pmb{u}_1$$ 与 $$m_1:\pmb{q}_1+t(k\pmb{u}_1)$$ 仍然平行。
+   $$
+   \begin{split}
+   f(\pmb{p}+t\pmb{u})&=\pmb{A}(\pmb{p}+t\pmb{u})+\pmb{b}=(\pmb{Ap}+\pmb{b})+t(\pmb{Au})=\pmb{p}_1+t\pmb{u}_1
+   \\
+   f(\pmb{q}+t\pmb{v})&=f(\pmb{q}+t(k\pmb{u}))\\&=\pmb{A}(\pmb{q}+t(k\pmb{u}))+\pmb{b}\\&=(\pmb{Aq}+\pmb{b})+t(\pmb{A}k\pmb{u)}\\&=\pmb{q}_1+t(k\pmb{u}_1)
+   \end{split}
+   $$
+   故，变换之后所得 $l_1:\pmb{p}_1+t\pmb{u}_1$ 与 $m_1:\pmb{q}_1+t(k\pmb{u}_1)$ 仍然平行。
 
 ### 计算工具
 
@@ -153,7 +158,7 @@ plt.show()
 
 [1]. tetradecane. https://www.zhihu.com/question/345279684/answer/819134982
 
-[2]. 惡魔獵人. https://www.zhihu.com/question/368556037/answer/990194830
+[2]. 关于仿射这个词有什么通俗易懂的解释吗？. https://www.zhihu.com/question/368556037/answer/990194830
 
 [3]. https://www.cnblogs.com/shine-lee/p/10950963.html
 
