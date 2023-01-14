@@ -1,6 +1,6 @@
 # 《机器学习数学基础》勘误和修改
 
-**[下载本页的 PDF 版](./images/corrigendum221229.pdf)**
+**[下载本页的 PDF 版](./images/corrigendum230113.pdf)**
 
 说明：
 
@@ -679,12 +679,17 @@
    - 修改为：尽管两次的初始值差距较大
    - 致谢：感谢读者孔祥松指出此错误。
 
-8. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
+8. 位置：146页，倒数第一个公式
+    - 原文：$\begin{bmatrix}\pmb{A\alpha}_1&\cdots&\pmb{A\alpha}_n\end{bmatrix}=\begin{bmatrix}d_{11}\pmb{\alpha}_1&\cdots&0\\\vdots&\ddots&\vdots\\0&\cdots&d_{nn}\pmb{\alpha}_n\end{bmatrix}$
+    - 修改为：$\begin{bmatrix}\pmb{A\alpha}_1&\cdots&\pmb{A\alpha}_n\end{bmatrix}=\begin{bmatrix}d_{11}\pmb{\alpha}_1&\cdots&d_{nn}\pmb{\alpha}_n\end{bmatrix}$
+    - 致谢：感谢读者徐文鑫提问。
+
+9. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
 
    - 原文：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}$ 表示 $l_2$ 范数，
    - 修改为：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}^2$ 表示 $l_2$ 范数，
 
-9. 位置：246页，公式（4.4.32）
+10. 位置：246页，公式（4.4.32）
 
    - 原文：
      
@@ -702,19 +707,18 @@
      
    - 修改说明：第一个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
    
-10. 位置：201页，第 4 行
+11. 位置：201页，第 4 行
 
    - 原文：$\left(\frac{f}{g}\right)=\frac{f^\prime g-fg^\prime}{g^2}$
    - 修改为：$\left(\frac{f}{g}\right)^\prime=\frac{f^\prime g-fg^\prime}{g^2}$
    - 致谢：感谢读者孔祥松指出此错误。
 
-11. 位置：217页，第 3 行
+12. 位置：217页，第 3 行
 
     - 原文： $8x+10\le2800$
     - 修改为：$8x+10y\le2800$
     - 致谢：感谢读者孔祥松指出此错误。
-
-12. 位置：219页，公式（4.3.4）
+13. 位置：219页，公式（4.3.4）
 
     - 原文：$F(\pmb{x})=\pmb{Ax}-\pmb{b}^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
     - 修改为：$F(\pmb{x})=(\pmb{Ax}-\pmb{b})^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
