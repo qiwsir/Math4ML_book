@@ -684,12 +684,17 @@
     - 修改为：$\begin{bmatrix}\pmb{A\alpha}_1&\cdots&\pmb{A\alpha}_n\end{bmatrix}=\begin{bmatrix}d_{11}\pmb{\alpha}_1&\cdots&d_{nn}\pmb{\alpha}_n\end{bmatrix}$
     - 致谢：感谢读者徐文鑫提问。
 
-9. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
+9. 位置：171页，正文，第 5 行
+
+    - 原文：设 $\pmb{A}$ 是对称矩阵，如果有非零向量 $\pmb{v}$ ，使得：
+    - 修改为：设 $\pmb{A}$ 是对称矩阵，如果有非零向量 $\pmb{v}$ ，使得： 
+
+10. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
 
    - 原文：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}$ 表示 $l_2$ 范数，
    - 修改为：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}^2$ 表示 $l_2$ 范数，
 
-10. 位置：246页，公式（4.4.32）
+11. 位置：246页，公式（4.4.32）
 
    - 原文：
      
@@ -706,7 +711,7 @@
      $$
      
    - 修改说明：第一个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
-   
+
 11. 位置：201页，第 4 行
 
    - 原文：$\left(\frac{f}{g}\right)=\frac{f^\prime g-fg^\prime}{g^2}$

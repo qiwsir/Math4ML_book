@@ -4,70 +4,77 @@
 
 ## 贝叶斯定理
 
-**定理：** 如果事件 $$A_1,A_2,\cdots,A_n$$ 互不相容， $$B\subset\cup_{j=1}^nA_j$$ ，则 $$P(B)\gt0$$ 时，有：
+**定理：** 如果事件 $A_1,A_2,\cdots,A_n$ 互不相容， $B\subset\cup_{j=1}^nA_j$ ，则 $P(B)\gt0$ 时，有：
 $$
 \displaystyle{P(A_j|B)=\frac{P(A_j)P(B|A_j)}{\sum_{i=1}^nP(A_i)P(B|A_i)}}\tag{1}
 $$
 
 
-其中 $$1\le j\le n$$ 。
+其中 $1\le j\le n$ 。
 
-对于分类问题，假设有 $$K$$ 种类别标签，即 $${\cal{Y}}=\{c_1,c_2,\cdots,c_K\}$$ （对应于（1）式中的互不相容的事件 $$A_j$$ ）。对于样本 $$\pmb{x}$$ ，要计算 $$P(c_j|\pmb{x})$$ ，根据（1）式，有：
+对于分类问题，假设有 $K$ 种类别标签，即 ${\cal{Y}}=\{c_1,c_2,\cdots,c_K\}$ （对应于（1）式中的互不相容的事件 $A_j$ ）。对于样本 $\pmb{x}$ ，要计算 $P(c_j|\pmb{x})$ ，根据（1）式，有：
 $$
 P(c_j|\pmb{x})=\frac{P(c_j)P(\pmb{x}|c_j)}{P(\pmb{x})}\tag{2}
 $$
 其中：
 
-- $$P(c_j)$$ 是先验概率。当训练集中包含充足的独立同分布样本时，可以用各类样本出现的频率估计此概率。
+- $P(c_j)$ 是先验概率。当训练集中包含充足的独立同分布样本时，可以用各类样本出现的频率估计此概率。
 
-- $$P(\pmb{x}|c_j)$$ 是样本 $$\pmb{x}$$ 相对类别 $$c_j$$ 的条件概率，称为“似然”。
+- $P(\pmb{x}|c_j)$ 是样本 $\pmb{x}$ 相对类别 $c_j$ 的条件概率，称为“似然”。
 
-  **注意：**有的资料中认为 $$P(\pmb{x}|c_j)$$ 可以用频率来估计$$^{[2]}$$ ，实则不然，参考资料 [3] 中对这个问题的完整说明。假设样本有 $$d$$ 个特征，并且都是二值类型的数据，那么样本空间所有可能取值为 $$2^d$$ 个。在现实应用中，这个值往往远大于训练集的样本数。也就是，很多样本取值在训练集中根本没有出现。**“未被观测到”与“出现概率为零”通常是不同的**，所以，不能用频率来估计概率 $$P(\pmb{x}|c_j)$$ 。
+  **注意：**有的资料中认为 $P(\pmb{x}|c_j)$ 可以用频率来估计$^{[2]}$ ，实则不然，参考资料 [3] 中对这个问题的完整说明。假设样本有 $d$ 个特征，并且都是二值类型的数据，那么样本空间所有可能取值为 $2^d$ 个。在现实应用中，这个值往往远大于训练集的样本数。也就是，很多样本取值在训练集中根本没有出现。**“未被观测到”与“出现概率为零”通常是不同的**，所以，不能用频率来估计概率 $P(\pmb{x}|c_j)$ 。
 
   如果从概率的角度来看，得到的训练集样本都具有随机性，如果要能够用频率估计概率，必须满足样本与总体是同分布的。但是，在样本数不是很充足的时候，就不能满足。所以，对于似然，不能用频率来估计。
 
-- $$P(\pmb{x})$$ 与类别无关，对于一个训练集而言，它是一个常量。从（1）式中，分母对一个试验而言，是一个常量。所以，（2）式可以转化为：
+- $P(\pmb{x})$ 与类别无关，对于一个训练集而言，它是一个常量。从（1）式中，分母对一个试验而言，是一个常量。所以，（2）式可以转化为：
   $$
   P(c_j|\pmb{x})\propto\!P(c_j)P(\pmb{x}|c_j)\tag{3}
   $$
-  由此可以，如果能够得到似然 $$P(\pmb{x}|c_j)$$ 的值，就可以根据（3）式得到后验概率 $$P(c_j|\pmb{x})$$ 的值，从而能够判断出样本所属的类别。
+  由此可以，如果能够得到似然 $P(\pmb{x}|c_j)$ 的值，就可以根据（3）式得到后验概率 $P(c_j|\pmb{x})$ 的值，从而能够判断出样本所属的类别。
 
-如何计算（3）式中的似然 $$P(\pmb{x}|c_j)$$ ，一种常用方法就是最大似然估计。
+如何计算（3）式中的似然 $P(\pmb{x}|c_j)$ ，一种常用方法就是最大似然估计。
 
 ## 最大似然估计
 
 在参考资料 [1] 中第6.2.1节，专门讲解了最大似然估计，这里使用其中的结论。
 
-按照如下步骤计算 $$P(\pmb{x}|c_j)$$ ：
+按照如下步骤计算 $P(\pmb{x}|c_j)$ ：
 
 1. 假设样本数据独立同分布，且为某种概率分布，但是不知道此概率分布的参数。
-2. 根据训练集样本数据，对概率分布的参数进行估计。假设 $$P(\pmb{x}|c_j)$$ 的概率分布的参数向量是 $$\pmb{\theta}$$ 
+2. 根据训练集样本数据，对概率分布的参数进行估计。假设 $P(\pmb{x}|c_j)$ 的概率分布的参数向量是 $\pmb{\theta}$ 
 
 根据参考资料 [1] 中的结论，可以得到如下似然：
 $$
 L(\pmb{X}_{c_j}|\pmb{\theta})=\prod_{\pmb{x}\in\pmb{X}_{c_j}}P(\pmb{x}|\pmb{\theta})\tag{4}
 $$
-其中：$$\pmb{X}_{c_j}$$ 是数据集中类别为 $$c_j$$ 的样本集合。
+其中：$\pmb{X}_{c_j}$ 是数据集中类别为 $c_j$ 的样本集合。
 
-在具体计算的时候，可以对（4）式取对数。例如参考资料 [1] 的358页中给出了对于数据符合正态分布的参数 $$\mu$$ 和 $$\sigma^2$$ （总体均值和方差）的估计。
+在具体计算的时候，可以对（4）式取对数。例如参考资料 [1] 的358页中给出了对于数据符合正态分布的参数 $\mu$ 和 $\sigma^2$ （总体均值和方差）的估计。
 
-设总体 $$X \sim N(\mu,\sigma^2)$$ （正态分布），$$\mu、\sigma^2$$ 是未知参数，$$x_1,\cdots,x_n$$ 是来自 $$X$$ 的样本值，求 $$\mu、\sigma^2$$ 的最大似然估计值。
+设总体 $X \sim N(\mu,\sigma^2)$ （正态分布），$\mu、\sigma^2$ 是未知参数，$x_1,\cdots,x_n$ 是来自 $X$ 的样本值，求 $\mu、\sigma^2$ 的最大似然估计值。
 
-1. 写出 $$X$$ 的概率密度函数：
-
-   $$f(x;\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{1}{2\sigma^2}(x-\mu)^2\right)$$
+1. 写出 $X$ 的概率密度函数：$f(x;\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{1}{2\sigma^2}(x-\mu)^2\right)$
 
 2. 写出似然函数（4）式：
 
-   $$L = \prod_{i=1}^n\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{1}{2\sigma^2}(x_i-\mu)^2\right)=(2\pi)^{-\frac{n}{2}}(\sigma^2)^{-\frac{n}{2}}\exp\left(-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\right)$$
+   $$
+   L = \prod_{i=1}^n\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{1}{2\sigma^2}(x_i-\mu)^2\right)=(2\pi)^{-\frac{n}{2}}(\sigma^2)^{-\frac{n}{2}}\exp\left(-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\right)
+   $$
+   
 
 3. 对上式取对数
 
-   $$\log L = -\frac{n}{2}\log(2\pi) - \frac{n}{2}\log\sigma^2-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2$$
+   $$
+   \log L = -\frac{n}{2}\log(2\pi) - \frac{n}{2}\log\sigma^2-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2
+   $$
+   
 
-4. 将 $$\log L$$ 分别对 $$\mu$$ 和 $$\sigma^2$$ 求偏导数，并令其为 $$0$$ （注意，$$\sigma^2$$ 视作一个整体）
+4. 将 $\log L$ 分别对 $\mu$ 和 $\sigma^2$ 求偏导数，并令其为 $0$ （注意，$\sigma^2$ 视作一个整体）
 
-   $$ \begin{cases}\frac{\partial}{\partial \mu}\log L &= \frac{1}{\sigma^2}(\sum_{i=1}^nx_i - n\mu)=0 \\ \frac{\partial}{\partial\sigma^2}\log L &= -\frac{n}{2\sigma^2}+ \frac{1}{2(\sigma^2)^2}\sum_{i=1}^n(x_i-\mu)^2=0 \end{cases}$$
+   $$
+    \begin{cases}\frac{\partial}{\partial \mu}\log L &= \frac{1}{\sigma^2}(\sum_{i=1}^nx_i - n\mu)=0 \\ \frac{\partial}{\partial\sigma^2}\log L &= -\frac{n}{2\sigma^2}+ \frac{1}{2(\sigma^2)^2}\sum_{i=1}^n(x_i-\mu)^2=0 \end{cases}
+   $$
+   
 
 5. 解方程组，分别得到 $\mu$ 和 $\sigma^2$ 的极大似然估计
 
@@ -81,7 +88,7 @@ $$
 
 如果进一步假设“特征相互独立”，即每个特征独立地对分类结果产生影响。
 
-假设一个样本 $$\pmb{x}$$ 有 $$d$$ 个特征，即： $$\pmb{x}=[x_1,x_2,\cdots,x_d]$$ ，则条件概率为：
+假设一个样本 $\pmb{x}$ 有 $d$ 个特征，即： $\pmb{x}=[x_1,x_2,\cdots,x_d]$ ，则条件概率为：
 $$
 \begin{split}
 P(\pmb{x}|c_j)&=P(x_1,x_2,\cdots,x_d|c_j)
@@ -93,13 +100,13 @@ $$
 P(c_j|\pmb{x})=\frac{P(c_j)P(\pmb{x}|c_j)}{P(\pmb{x})}=\frac{P(c_j)}{P(\pmb{x})}\prod_{i=1}^dP(x_i|c_j)\tag{7}
 $$
 
-- 对于（7）式中的先验概率 $$P(c_j)$$ ，按照之前所讲，可以用该类别样本数量占全体数据集样本数量的比例来估计，即用频率估计概率，用下面的方式表示：
+- 对于（7）式中的先验概率 $P(c_j)$ ，按照之前所讲，可以用该类别样本数量占全体数据集样本数量的比例来估计，即用频率估计概率，用下面的方式表示：
   $$
   P(c_j)=\frac{1}{K}\sum_{i=1}^KI(y_i=c_j),~(j=1,2\cdots,n)\tag{8}
   $$
-  其中 $$I(\cdot)$$ 表示函数：$$\displaystyle{I=\begin{cases}&1,(y=c)\\&0,(others)\end{cases}}$$ 。
+  其中 $I(\cdot)$ 表示函数：$\displaystyle{I=\begin{cases}&1,(y=c)\\&0,(others)\end{cases}}$ 。
 
-- 对于 $$\prod_{i=1}^dP(x_i|c_j)$$ ，则是利用（4）式的最大似然估计计算。针对不同的概率分布，分别有不同的计算结果。
+- 对于 $\prod_{i=1}^dP(x_i|c_j)$ ，则是利用（4）式的最大似然估计计算。针对不同的概率分布，分别有不同的计算结果。
 
 ### 高斯朴素贝叶斯分类器
 
@@ -114,9 +121,9 @@ $$
 $$
 P(x_i|c_j)=px_i+(1-p)(1-x_i),~(其中:p=P(x_i=1|c_j),x_i\in\{0,1\})\tag{10}
 $$
-对（8）式和（9）式，利用最大似然估计，均可以估计到其中的参数，从而得到条件概率 $$P(x_i|c_j)$$ ，最大似然估计的方法见参考资料 [1] 。
+对（8）式和（9）式，利用最大似然估计，均可以估计到其中的参数，从而得到条件概率 $P(x_i|c_j)$ ，最大似然估计的方法见参考资料 [1] 。
 
-## 最大后验估计$$^{[1]}$$
+## 最大后验估计$^{[1]}$
 
 前面用最大似然估计，能够计算出条件概率，在利用（2）式，得到后验概率。这种方法，背后隐藏着一个基本观点，即认为分布的总体参数虽然未知，但是它是客观存在的一个固定值，因此可以通过优化似然函数获得。这就是所谓的**频率主义学派**的观点。
 
@@ -124,53 +131,56 @@ $$
 
 贝叶斯学派强调“观察者”所掌握的知识（即对被观察对象的认识）。如果“观察者”知识完备，则能准确而唯一的判断事件的结果，不需要概率。
 
-对于先验分布，假设为参数 $$\theta_1,\cdots,\theta_k$$ ，在已有的认识中，这些参数具有某种规律，设概率密度函数为 $$g(\theta_1,\cdots,\theta_k)$$ （简写为 $$g(\pmb{\theta})$$ 。此处以连续型分布为例，如果是离散型，可记作 $$p(\theta_1, \cdots, \theta_k)$$ ）。
+对于先验分布，假设为参数 $\theta_1,\cdots,\theta_k$ ，在已有的认识中，这些参数具有某种规律，设概率密度函数为 $g(\theta_1,\cdots,\theta_k)$ （简写为 $g(\pmb{\theta})$ 。此处以连续型分布为例，如果是离散型，可记作 $p(\theta_1, \cdots, \theta_k)$ ）。
 
-先验分布 $$g(\theta_1,\cdots,\theta_k)$$ 中的参数也是未知的（或部分未知）——这就是知识不完备。为了能准确判断，还需要结合观测数据得到的知识，也就是似然函数 $$f(x_1,\cdots,x_n|\theta_1,\cdots,\theta_k)$$  ，简写作 $$f(\pmb{x}|\pmb{\theta})$$（如果是离散型，则可写作 $$p(x_1,\cdots,x_n | \theta_1,\cdots,\theta_k)$$ ）。
+先验分布 $g(\theta_1,\cdots,\theta_k)$ 中的参数也是未知的（或部分未知）——这就是知识不完备。为了能准确判断，还需要结合观测数据得到的知识，也就是似然函数 $f(x_1,\cdots,x_n|\theta_1,\cdots,\theta_k)$  ，简写作 $f(\pmb{x}|\pmb{\theta})$（如果是离散型，则可写作 $p(x_1,\cdots,x_n | \theta_1,\cdots,\theta_k)$ ）。
 
 然后将先验分布和似然函数，根据（1）式的贝叶斯定理，可得：
 $$
 \displaystyle\!f(\pmb{\theta}|\pmb{x}) = \frac{f(\pmb{x}|\pmb{\theta})g(\pmb{\theta})}{\int_{\pmb{\Theta}}f(\pmb{x}|\boldsymbol{\theta})g(\pmb{\theta})d\pmb{\theta}}  \tag{11}
 $$
 
--  $$f(\pmb{\theta}|\pmb{x})$$ 就是**后验概率**或**后验分布**——“试验之后”。
--  $$\pmb{\Theta}$$ 是 $$g(\pmb{\theta})$$ 的值域，且 $$\pmb\theta \in \pmb\Theta$$ 。分母 $$\int_{\pmb\Theta}f(\pmb{x}|\pmb\theta)g(\pmb\theta)d\pmb\theta = p(\pmb{x})$$ ，是观测到的数据的边缘分布，与 $$\pmb\theta$$ 无关，在此相当于一个常数，故：
+-  $f(\pmb{\theta}|\pmb{x})$ 就是**后验概率**或**后验分布**——“试验之后”。
+-  $\pmb{\Theta}$ 是 $g(\pmb{\theta})$ 的值域，且 $\pmb\theta \in \pmb\Theta$ 。分母 $\int_{\pmb\Theta}f(\pmb{x}|\pmb\theta)g(\pmb\theta)d\pmb\theta = p(\pmb{x})$ ，是观测到的数据的边缘分布，与 $\pmb\theta$ 无关，在此相当于一个常数，故：
 
 $$
 f(\pmb\theta|\pmb{x}) \propto f(\pmb{x}|\pmb\theta)g(\pmb\theta)\tag{12}
 $$
 
-在（10）式中，似然函数 $$f(\pmb{x}|\pmb\theta)$$ 的函数形式可以根据观测数据确定（注意，参数 $$\pmb\theta$$ 未知），
+在（10）式中，似然函数 $f(\pmb{x}|\pmb\theta)$ 的函数形式可以根据观测数据确定（注意，参数 $\pmb\theta$ 未知），
 
-那么先验分布 $$g(\pmb\theta)$$ 的形式应该如何确定？
+那么先验分布 $g(\pmb\theta)$ 的形式应该如何确定？
 
-在贝叶斯统计学中，如果先验分布 $$g(\pmb\theta)$$ 和后验分布 $$f(\pmb\theta|\pmb{x})$$ 为同种类型的分布，称它们为**共轭分布**（conjugate distributions），此时的先验分布称为似然函数 $$f(\pmb{x}|\pmb\theta)$$ 的**共轭先验**（conjugate prior）。
+在贝叶斯统计学中，如果先验分布 $g(\pmb\theta)$ 和后验分布 $f(\pmb\theta|\pmb{x})$ 为同种类型的分布，称它们为**共轭分布**（conjugate distributions），此时的先验分布称为似然函数 $f(\pmb{x}|\pmb\theta)$ 的**共轭先验**（conjugate prior）。
 
-显然，要对后验分布 $$f(\pmb\theta|\pmb{x})$$ 求最大值。依据（12）式，进而计算 $$f(\pmb{x}|\pmb\theta)g(\pmb\theta)$$ 的最大值，最终得到估计量 $$\hat{\pmb\theta}$$ 。
+显然，要对后验分布 $f(\pmb\theta|\pmb{x})$ 求最大值。依据（12）式，进而计算 $f(\pmb{x}|\pmb\theta)g(\pmb\theta)$ 的最大值，最终得到估计量 $\hat{\pmb\theta}$ 。
 $$
 arg\max_{\theta_1,\cdots, \theta_k} f(\theta_1,\cdots,\theta_k|x_1,\cdots,x_n) \propto arg\max_{\theta_1,\cdots,\theta_k} f(x_1,\cdots,x_n|\theta_1,\cdots,\theta_k)g(\theta_1,\cdots,\theta_k)\tag{13}
 $$
 对上式右侧去对数：
 
-$$\begin{split}& arg\max_{\theta_1,\cdots,\theta_k} \log\prod_{i=1}^nf(x_i|\theta_1,\cdots,\theta_k)+\log(g(\theta_1,\cdots,\theta_k))\\ = & arg \max_{\theta_1,\cdots,\theta_k}\sum_{i=1}^n(\log f(x_i|\theta_1,\cdots,\theta_k)) + \log(g(\theta_1,\cdots,\theta_k))\end{split}$$
+$$
+\begin{split}& arg\max_{\theta_1,\cdots,\theta_k} \log\prod_{i=1}^nf(x_i|\theta_1,\cdots,\theta_k)+\log(g(\theta_1,\cdots,\theta_k))\\ = & arg \max_{\theta_1,\cdots,\theta_k}\sum_{i=1}^n(\log f(x_i|\theta_1,\cdots,\theta_k)) + \log(g(\theta_1,\cdots,\theta_k))\end{split}
+$$
 
-这样，通过计算上式的最大值，就得到了参数的估计量 $$\hat{\pmb\theta}_{MAP}$$ ，这个估计方法称为**最大后验估计**（maximum a posteriori estimation，MAP）。
 
-不难看出， $$\displaystyle{arg\max_{\theta_1,\cdots,\theta_k}\sum_{i=1}^n(\log f(x_i|\theta_1,\cdots,\theta_k))}$$ 就是最大似然的估计量 $$\hat{\pmb\theta}_{MLE}$$ 。所以，我们可以说，$$\log g(\pmb\theta)$$ 就是对 $$\hat{\pmb\theta}_{MLE}$$ 增加的正则项，此修正来自于我们的主观认识。注意一种特殊情况，如果先验分布式均匀分布，例如 $g(\theta) = 0.8$ ，那么最大后验估计就退化为最大似然估计了。 
+这样，通过计算上式的最大值，就得到了参数的估计量 $\hat{\pmb\theta}_{MAP}$ ，这个估计方法称为**最大后验估计**（maximum a posteriori estimation，MAP）。
+
+不难看出， $\displaystyle{arg\max_{\theta_1,\cdots,\theta_k}\sum_{i=1}^n(\log f(x_i|\theta_1,\cdots,\theta_k))}$ 就是最大似然的估计量 $\hat{\pmb\theta}_{MLE}$ 。所以，我们可以说，$\log g(\pmb\theta)$ 就是对 $\hat{\pmb\theta}_{MLE}$ 增加的正则项，此修正来自于我们的主观认识。注意一种特殊情况，如果先验分布式均匀分布，例如 $g(\theta) = 0.8$ ，那么最大后验估计就退化为最大似然估计了。 
 
 下面使用参考资料 [1] 中已经证明的一个结论：
 
-二项分布 $$p(x|\theta)=\begin{pmatrix}n\\x\end{pmatrix}\theta^x(1-\theta)^{n-x}$$ 的共轭服从 $$\text{B}$$ 分布（Beta 分布），即：
-$$
+二项分布 $p(x|\theta)=\begin{pmatrix}n\\x\end{pmatrix}\theta^x(1-\theta)^{n-x}$ 的共轭服从 $\text{B}$ 分布（Beta 分布），即：
+$
 g(\theta)=p(\theta) = \text{B}(\alpha, \beta)= \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha-1}(1-\theta)^{\beta-1}\tag{14}
-$$
-其中 $$\Gamma(\cdot)$$ 是 Gamma 函数（ $$\Gamma(n) = (n-1)!$$ ），$$\alpha$$ 和 $$\beta$$ 是与样本无关的超参数。
+$
+其中 $\Gamma(\cdot)$ 是 Gamma 函数（ $\Gamma(n) = (n-1)!$ ），$\alpha$ 和 $\beta$ 是与样本无关的超参数。
 
 并得到：
 $$
 p(\theta|x) \propto \text{B}(x+\alpha, n-x+\beta)\tag{15}
 $$
-即后验分布也是 $$\text{B}$$ 分布，与先验分布构成了共轭分布。
+即后验分布也是 $\text{B}$ 分布，与先验分布构成了共轭分布。
 
 并且可以求得：
 $$
@@ -178,14 +188,14 @@ $$
 $$
 以上结论见参考资料 [1] 的6.2.3节。
 
-如果，对于 $$\theta$$ 的先验估计是 $$\theta_0$$ ，可以令：
+如果，对于 $\theta$ 的先验估计是 $\theta_0$ ，可以令：
 $$
 \begin{split}
 \alpha&=\lambda\theta_0+1
 \\\beta&=\lambda(1-\theta_0)+1
 \end{split}\tag{17}
 $$
-注意：（17）式是为了后面的目的而凑出来的一种假设，并引入了变量 $$\lambda$$ 。
+注意：（17）式是为了后面的目的而凑出来的一种假设，并引入了变量 $\lambda$ 。
 
 将（17）式代入（16）式，得到：
 $$
@@ -196,17 +206,17 @@ $$
 
 ### 多项朴素贝叶斯分类器
 
-即特征的条件概率分布满足多项分布，其参数 $$\theta$$ 的估计值就是经过拉普拉斯修正之后的值$$^{[4]}$$：
+即特征的条件概率分布满足多项分布，其参数 $\theta$ 的估计值就是经过拉普拉斯修正之后的值$^{[4]}$：
 $$
 \hat{\theta}_{y_i}=\frac{N_{y_i}+\alpha}{N_y+\alpha\!n}\tag{19}
 $$
-其中 $$\displaystyle{N_{y_i}=\Sigma_{x\in~\!T}}x_i$$ 是测试集类别标签为 $$y$$ 的样本中，特征 $$i$$ 出现的次数。$$N_y=\Sigma_{i=1}^nN_{y_i}$$ 是所有类别标签是 $$y$$ 的特征数量。
+其中 $\displaystyle{N_{y_i}=\Sigma_{x\in~\!T}}x_i$ 是测试集类别标签为 $y$ 的样本中，特征 $i$ 出现的次数。$N_y=\Sigma_{i=1}^nN_{y_i}$ 是所有类别标签是 $y$ 的特征数量。
 
-（21）式中的 $$\alpha$$ ，称为**平滑先验**：
+（21）式中的 $\alpha$ ，称为**平滑先验**：
 
-- 若 $$\alpha\ge0$$ ，考虑了学习样本中不存在的特征，并防止在进一步计算中出现零概率。 
-- 若 $$\alpha=1$$ ，称为拉普拉斯平滑。
-- 若 $$\alpha\lt0$$ ，称为 **Lidstone 平滑**。 
+- 若 $\alpha\ge0$ ，考虑了学习样本中不存在的特征，并防止在进一步计算中出现零概率。 
+- 若 $\alpha=1$ ，称为拉普拉斯平滑。
+- 若 $\alpha\lt0$ ，称为 **Lidstone 平滑**。 
 
 ## 朴素贝叶斯实现
 
@@ -323,7 +333,7 @@ $$
    mnb.score(X_test, y_test)
    ```
 
-5. 观察 $$\alpha$$ 对预测结果的影响
+5. 观察 $\alpha$ 对预测结果的影响
 
    ```python
    # alpha的值对模型的影响
