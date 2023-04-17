@@ -1,4 +1,4 @@
-# 《机器学习数学基础》勘误和修改
+# 勘误和修改
 
 百度网盘下载 PDF 文档：链接: https://pan.baidu.com/s/1OOimHFaTJ-CxmeCvnADFPQ 提取码: d3a5
 
@@ -685,25 +685,23 @@
     - 修改为：$\begin{bmatrix}\pmb{A\alpha}_1&\cdots&\pmb{A\alpha}_n\end{bmatrix}=\begin{bmatrix}d_{11}\pmb{\alpha}_1&\cdots&d_{nn}\pmb{\alpha}_n\end{bmatrix}$
     - 致谢：感谢读者徐文鑫提问。
 
-10. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
+9. 位置：222页，正文，第 6 行（公式（4.3.7）下面的一行）
 
    - 原文：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}$ 表示 $l_2$ 范数，
    - 修改为：忽略二次以及更高的项，$\begin{Vmatrix}\pmb{x} - \pmb{x}_0\end{Vmatrix}^2$ 表示 $l_2$ 范数，
 
-11. 位置：246页，公式（4.4.32）
+10. 位置：246页，公式（4.4.32）
 
    - 原文：
      
-     
      $$
-     \begin{split}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} &= \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h1_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h1_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h1_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{split} \tag{4.4.32}
+     \begin{equation}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h1_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h1_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h1_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{equation}\quad\text{(4.4.32)}
      $$
      
    - 修改为：
      
-     
      $$
-     \begin{split}\begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} &= \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h2_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h2_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h2_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\end{split}\tag{4.4.32}
+     \begin{bmatrix}\frac{\partial E_{total}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h1_{out3}}\end{bmatrix} = \begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}\frac{\partial h2_{in1}}{\partial h1_{out1}}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}\frac{\partial h2_{in2}}{\partial h1_{out2}}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}\frac{\partial h2_{in3}}{\partial h1_{out3}}\end{bmatrix}=\begin{bmatrix}\frac{\partial E_{total}}{\partial h2_{out1}}\frac{\partial h2_{out1}}{\partial h2_{in1}}w_{j1k1}\\\frac{\partial E_{total}}{\partial h2_{out2}}\frac{\partial h2_{out2}}{\partial h2_{in2}}w_{j2k2}\\\frac{\partial E_{total}}{\partial h2_{out3}}\frac{\partial h2_{out3}}{\partial h2_{in3}}w_{j3k3}\end{bmatrix}\quad\text{(4.4.32)}
      $$
      
    - 修改说明：第一个等号之后的矩阵中第三列的分子，分别由原来的 $\partial h1_{in1},\partial h1_{in2},\partial h1_{in3}$ ，改为 $\partial h2_{in1},\partial h2_{in2},\partial h2_{in3}$ 
@@ -716,9 +714,10 @@
 
 12. 位置：217页，第 3 行
 
-    - 原文： $8x+10\lt2800$
-    - 修改为：$8x+10y\lt2800$
+    - 原文： $8x+10\le2800$
+    - 修改为：$8x+10y\le2800$
     - 致谢：感谢读者孔祥松指出此错误。
+
 13. 位置：219页，公式（4.3.4）
 
     - 原文：$F(\pmb{x})=\pmb{Ax}-\pmb{b}^2=(\pmb{Ax}-\pmb{b})^{\text{T}}(\pmb{Ax}-\pmb{b})=\pmb{x}^{\text{T}}\pmb{A}^{\text{T}}\pmb{Ax}-2\pmb{b}^{\text{T}}\pmb{Ax}+\pmb{b}^{\text{T}}\pmb{b}$
@@ -770,6 +769,32 @@
    - 原文：其中 $\nabla^2f(\hat{\pmb{x}}_k)$ 是黑塞矩阵（Hessianmatrix，参阅 4.2.3 节）。
    - 修改为：其中 $\nabla^2f(\hat{\pmb{x}}_k)$ 是黑塞矩阵（Hessian Matrix，参阅 4.2.3 节）。
    - 修改说明：英文 “Hessianmatrix” 修改为 “Hessian Matrix”。
+
+4. 位置：309页，正文，第 10 行，即“定义”的第 2 行
+
+   - 原文：$\{X_1=a_{1j_1},\cdots,X_n=a_{1j_n}\}$ 
+   - 修改为：$\{X_1=a_{1j_1},\cdots,X_n=a_{nj_n}\}$
+   - 修改说明：将原文中的 $X_n=a_{1j_n}$ 修改为 $X_n=a_{nj_n}$ 
+   - 致谢：感谢名为大越的读者指出。
+
+5. 位置：343页，正文，倒数第 5 行，即本页最后一个公式
+
+   - 原文：
+   - 
+     $$
+     \begin{split}Cov(\pmb{X}) &= E\left((\pmb{X} - E[\pmb{X}])(\pmb{X} - E[\pmb{X}])^\text{T}\right) \\ &= E\left(\pmb{XX}^T-\pmb{X}E[\pmb{X}]^\text{T} - E[\pmb{X}\pmb{X}]^\text{T} + E[\pmb{X}]E[\pmb{X}]^\text{T}\right)  \\ &= E[\pmb{XX}^\text{T}] - E[\pmb{X}]E[\pmb{X}]^\text{T} - E[\pmb{X}]E[\pmb{X}^\text{T}] + E[\pmb{X}]E[\pmb{X}^\text{T}] \\ &= E[\pmb{XX}^\text{T}]-E[\pmb{X}]E[\pmb{X}]^\text{T}\end{split}
+     $$
+
+   - 修改为：
+   - 
+     $$
+     \begin{split}Cov(\pmb{X}) &= E\left((\pmb{X} - E[\pmb{X}])(\pmb{X} - E[\pmb{X}])^\text{T}\right) 
+     \\&=E\left((\pmb{X}-E[\pmb{X}])(\pmb{X}^\text{T}-E[\pmb{X}]^\text{T})\right)
+     \\&= E\left(\pmb{XX}^T-\pmb{X}E[\pmb{X}]^\text{T} - E[\pmb{X}]\pmb{X}^\text{T} + E[\pmb{X}]E[\pmb{X}]^\text{T}\right)  
+     \\ &= E[\pmb{XX}^\text{T}] - E[\pmb{X}]E[\pmb{X}]^\text{T} - E[\pmb{X}]E[\pmb{X}^\text{T}] + E[\pmb{X}]E[\pmb{X}^\text{T}] \\ &= E[\pmb{XX}^\text{T}]-E[\pmb{X}]E[\pmb{X}]^\text{T}\end{split}
+     $$
+
+   - 修改说明：相对于原文，增加了第二行等号；第三行括号里面的第三项，原文中是 $E[\pmb{X}\pmb{X}]^\text{T}$ ，修改为 $E[\pmb{X}]\pmb{X}^\text{T}$ 。
 
 -----
 
