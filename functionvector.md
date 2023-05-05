@@ -1,26 +1,32 @@
-# 函数也是向量
+# 欧几里得空间的推广
+
+在《机器学习数学基础》第 1 章介绍了向量空间，并且说明了机器学习问题通常是在欧几里得空间。然而，随着机器学习技术的发展，特别是 AI 技术开始应用于科学研究中，必然会涉及到其他类型的空间。本文即在《机器学习数学基础》一书所讲解的内容基础之上，简要介绍希尔伯特空间、函数空间的有关概念。
 
 ## 希尔伯特空间
 
-在数学裡，希尔伯特空间（英語：Hilbert space）即完备的内积空间，也就是一个带有内积完备向量空间。
+在数学裡，希尔伯特空间（英语：Hilbert space）即完备的内积空间，也就是一个带有内积完备向量空间。
 
-例如 $$\mathbb{R}^\infty$$ 中的向量 $$\pmb{v}$$ 含有无限多个分量，即：
+例如 $\mathbb{R}^\infty$ 中的向量 $\pmb{v}$ 含有无限多个分量，即：
 
-$$\pmb{v}=\begin{bmatrix}v_1\\v_2\\\vdots\end{bmatrix}$$
+$$
+\pmb{v}=\begin{bmatrix}v_1\\v_2\\\vdots\end{bmatrix}
+$$
+
 
 若要使得以下定义依然成立：
 
-$$\begin{Vmatrix}\pmb{v}\end{Vmatrix}^2=v_1^2+v_2^2+\cdots$$
+$$
+\begin{Vmatrix}\pmb{v}\end{Vmatrix}^2=v_1^2+v_2^2+\cdots
+$$
 
-则上述无穷级数应该收敛至一个有限数值，例如：$$\pmb{v}=\begin{bmatrix}1\\1/2\\1/3\\\vdots\end{bmatrix}$$。
 
-这样，向量的长度是有限的，对于空间中有限长度的向量 $$\pmb{x}$$ 和 $$\pmb{y}$$ ，则还会有：
+则上述无穷级数应该收敛至一个有限数值，例如：$\pmb{v}=\begin{bmatrix}1\\1/2\\1/3\\\vdots\end{bmatrix}$。
 
-$$\begin{Vmatrix}\pmb{x}+\pmb{y}\end{Vmatrix}\le\begin{Vmatrix}\pmb{x}\end{Vmatrix}+\begin{Vmatrix}\pmb{y}\end{Vmatrix}$$ 
+这样，向量的长度是有限的，对于空间中有限长度的向量 $\pmb{x}$ 和 $\pmb{y}$ ，则还会有：$\begin{Vmatrix}\pmb{x}+\pmb{y}\end{Vmatrix}\le\begin{Vmatrix}\pmb{x}\end{Vmatrix}+\begin{Vmatrix}\pmb{y}\end{Vmatrix}$ 
 
-且 $$a\pmb{x}$$ ，其中 $$a$$ 是一个有限的标量，仍然是一个有限量。
+且 $a\pmb{x}$ （其中 $a$ 是一个有限的标量）仍然是一个有限量。
 
-由此容易证明向量空间的8条法则依然成立（《机器学习数学基础》第15页）。
+由此容易证明向量空间的 8 条法则依然成立（《机器学习数学基础》第15页）。
 
 这样的空间，就是希尔伯特空间，是一个保持一般几何性质的无限维向量空间。
 
@@ -34,216 +40,264 @@ $$\begin{Vmatrix}\pmb{x}+\pmb{y}\end{Vmatrix}\le\begin{Vmatrix}\pmb{x}\end{Vmatr
 
 例如在量子力学中，一个物理系统可以表示为一个复希尔伯特空间，其中的向量是描述系统可能状态的波函数。
 
-## 函数空间$$^{[1]}$$
+## 函数空间
 
-设正弦函数 $$f(x)=\sin(x)$$ ，定义域为 $$0\le x\le2\pi$$ ，视此函数为无限维向量，向量的各个分量即为连续区间内的函数值 $$\sin(x)$$ 。当向量的分量是连续时，其平方和可写成积分形式（即 $$f$$ 的长度平方）：
+设正弦函数 $f(x)=\sin(x)$ ，定义域为 $0\le x\le2\pi$ ，视此函数为无限维向量，向量的各个分量即为连续区间内的函数值 $\sin(x)$ 。当向量的分量是连续时，其平方和可写成积分形式（即 $f$ 的长度平方）：
 
-$$\begin{Vmatrix}f\end{Vmatrix}^2=\int_0^{2\pi}(f(x))^2dx=\int_0^{2\pi}(\sin x)^2dx=\pi$$
+$$
+\begin{Vmatrix}f\end{Vmatrix}^2=\int_0^{2\pi}(f(x))^2dx=\int_0^{2\pi}(\sin x)^2dx=\pi
+$$
+
 
 上式说明，我们可以测量函数的长度，即可以将此函数看做向量，从而形成了向量空间，此向量空间的维数无限，显然是希尔伯特空间，也就是一个函数空间。
 
-如果 $$f(x)=\sin(x), g(x)=\cos(x)$$ ，计算内积：
+如果 $f(x)=\sin(x), g(x)=\cos(x)$ ，计算内积：
 
-$$\langle f, g\rangle=\int_0^{2\pi}f(x)g(x)dx=\int_0^{2\pi}\sin(x)\cos(x)dx=0$$
+$$
+\langle f, g\rangle=\int_0^{2\pi}f(x)g(x)dx=\int_0^{2\pi}\sin(x)\cos(x)dx=0
+$$
+
 
 故正弦和余弦正交。
 
 ### 线性函数
 
-设函数 $$f$$ 是：$$f:V\to W$$ ，对于任意向量 $$\pmb{x}$$ 和 $$\pmb{y}$$ ，以及任意实数 $$c$$ ，若满足：
+设函数 $f$ 是：$f:V\to W$ ，对于任意向量 $\pmb{x}$ 和 $\pmb{y}$ ，以及任意实数 $c$ ，若满足：
 
-$$\begin{split}f(\pmb{x}+\pmb{y})&=f(\pmb{x})+f(\pmb{y})\\f(c\pmb{x})&=cf(\pmb{x})\end{split}$$
+$$
+\begin{split}f(\pmb{x}+\pmb{y})&=f(\pmb{x})+f(\pmb{y})\\f(c\pmb{x})&=cf(\pmb{x})\end{split}
+$$
 
-则 $$f$$ 是线性函数。
+
+则 $f$ 是线性函数。
 
 - 几何向量空间
 
-  设 $$\pmb{A}$$ 是 $$m\times n$$ 阶实矩阵，$$\pmb{x}\in\mathbb{R}^n$$ ，$$f(\pmb{x})=\pmb{Ax}$$ 是一个由 $$\mathbb{R}^n$$ 映至 $$\mathbb{R}^m$$ 的线性函数，则：
+  设 $\pmb{A}$ 是 $m\times n$ 阶实矩阵，$\pmb{x}\in\mathbb{R}^n$ ，$f(\pmb{x})=\pmb{Ax}$ 是一个由 $\mathbb{R}^n$ 映至 $\mathbb{R}^m$ 的线性函数，则：
 
-  $$\begin{split}f(\pmb{x}+\pmb{y})&=\pmb{A}(\pmb{x}+\pmb{y})=\pmb{Ax}+\pmb{Ay}=f(\pmb{x})+f(\pmb{y})\\f(c\pmb{x})&=\pmb{A}(c\pmb{x})=c(\pmb{Ax})=cf(\pmb{x})\end{split}$$
+  $$
+  \begin{split}f(\pmb{x}+\pmb{y})&=\pmb{A}(\pmb{x}+\pmb{y})=\pmb{Ax}+\pmb{Ay}=f(\pmb{x})+f(\pmb{y})\\f(c\pmb{x})&=\pmb{A}(c\pmb{x})=c(\pmb{Ax})=cf(\pmb{x})\end{split}
+  $$
+  
 
 - 多项式空间
 
-  令 $$\mathcal{P}$$ 为所有多項式形成的向量空间，微分算子 $$D=d/dx$$ 可視為由 $$\mathcal{P}$$ 映至 $$\mathcal{P}$$ 的函数，例如，$$D(2-x+x^3)=-1+3x^2$$。微分算子 $$D$$ 是一个线性函数，利用导数基本性质，可知：
+  令 $\mathcal{P}$ 为所有多項式形成的向量空间，微分算子 $D=d/dx$ 可視為由 $\mathcal{P}$ 映至 $\mathcal{P}$ 的函数，例如，$D(2-x+x^3)=-1+3x^2$。微分算子 $D$ 是一个线性函数，利用导数基本性质，可知：
 
-  $$\begin{aligned}  D(p(x)+q(x))&=D(p(x))+D(q(x))\\    D(cp(x))&=cD(p(x))\end{aligned}$$
-
-  求二次导数，记作：$$DD=D^2$$ ，易知 $$D^2p= p''$$ 是线性函数，推广至更高次冪，$$D,D^2,\ldots,D^k$$ 全部都是线性函数。
+  $$
+  \begin{aligned}  D(p(x)+q(x))&=D(p(x))+D(q(x))\\    D(cp(x))&=cD(p(x))\end{aligned}
+  $$
+  
+  
+  求二次导数，记作：$DD=D^2$ ，易知 $D^2p= p''$ 是线性函数，推广至更高次冪，$D,D^2,\ldots,D^k$ 全部都是线性函数。
   
 - 连续函数空间
 
-  令 $$C(-\infty,\infty)$$ 表示所有连续函数形成的空间，$$L:C(-\infty,\infty)\rightarrow C(-\infty,\infty)$$ ，函数 $$u(x), q(x)\in C(-\infty,\infty)$$ ，考虑以下的例子：
+  令 $C(-\infty,\infty)$ 表示所有连续函数形成的空间，$L:C(-\infty,\infty)\rightarrow C(-\infty,\infty)$ ，函数 $u(x), q(x)\in C(-\infty,\infty)$ ，考虑以下的例子：
 
-  $$L(u(x))=q(x)u(x)$$
+  $L(u(x))=q(x)u(x)$ ，则 $L$ 是线性函数。
 
-  则 $$L$$ 是线性函数。证明：
+  证明：
+  $$
+  \begin{aligned}  L(u(x)+v(x))&=q(x)(u(x)+v(x))=L(u(x))+L(v(x))\\    L(cu(x))&=q(x)(cu(x))=c(q(x)u(x))=cL(u(x))\end{aligned}
+  $$
+  
 
-  $$\begin{aligned}  L(u(x)+v(x))&=q(x)(u(x)+v(x))=L(u(x))+L(v(x))\\    L(cu(x))&=q(x)(cu(x))=c(q(x)u(x))=cL(u(x))\end{aligned}$$
+  將微分算子 $D$ 线性函数 $L$ 结合成一个方程式便得到微分方程 $D(u(x))=L(u(x))=q(x)u(x)$ 。
 
-  將微分算子 $$D$$ 线性函数 $$L$$ 结合成一个方程式便得到微分方程
-
-  $$D(u(x))=L(u(x))=q(x)u(x)$$
-
-  例如，设 $$y=u(x)$$ ，$$q(x)=x$$ ，就有 $$Dy=xy$$ 或写成：$$y'=xy$$ 。求解微分方程等于找 $$y$$ 使得 $$Dy=Ly$$，由此可以逐步建立微分方程与线性代数的关联。
+  例如，设 $y=u(x)$ ，$q(x)=x$ ，就有 $Dy=xy$ 或写成：$y'=xy$ 。求解微分方程等于找 $y$ 使得 $Dy=Ly$，由此可以逐步建立微分方程与线性代数的关联。
 
 ### 零空间
 
-设 $$f:V\to W$$ 是一个线性函数，所有满足 $$f(\pmb{x})=\pmb{0}$$ 的 $$\pmb{x}$$ 所形成的集合构成 $$V$$ 里的一个子空间，称为零空间或核$$^{[2]}$$，记作 $$N(f)$$ 或 $$\text{ker}f$$ 。
+设 $f:V\to W$ 是一个线性函数，所有满足 $f(\pmb{x})=\pmb{0}$ 的 $\pmb{x}$ 所形成的集合构成 $V$ 里的一个子空间，称为零空间或核$^{[2]}$，记作 $N(f)$ 或 $\text{ker}f$ 。
 
-设 $$\pmb{u},\pmb{v}\in N(f)$$ ，根据线性函数的基本性质，有：
+设 $\pmb{u},\pmb{v}\in N(f)$ ，根据线性函数的基本性质，有：
 
-$$\begin{aligned}  f(\pmb{u}+\pmb{v})&=f(\pmb{u})+f(\pmb{v})=\pmb{0}+\pmb{0}=\pmb{0}\\    f(c\pmb{u})&=cf(\pmb{u})=c\pmb{0}=\pmb{0}\end{aligned}$$
+$$
+\begin{aligned}  f(\pmb{u}+\pmb{v})&=f(\pmb{u})+f(\pmb{v})=\pmb{0}+\pmb{0}=\pmb{0}\\    f(c\pmb{u})&=cf(\pmb{u})=c\pmb{0}=\pmb{0}\end{aligned}
+$$
 
-这说明 $$N(f)$$ 满足向量加法和数量乘法封闭原则，所以 $$N(f)$$ 是 $$V$$ 的子空间。
 
-将 $$f(\pmb{x})=\pmb{0}$$ 称为齐次方程（homogeneouos equation）。齐次现象方程至少有一个零解，$$f(\pmb{0})=\pmb{0}$$ ，也就是说零空间 $$N(f)$$ 必定包含零向量。
+这说明 $N(f)$ 满足向量加法和数量乘法封闭原则，所以 $N(f)$ 是 $V$ 的子空间。
+
+将 $f(\pmb{x})=\pmb{0}$ 称为齐次方程（homogeneouos equation）。齐次现象方程至少有一个零解，$f(\pmb{0})=\pmb{0}$ ，也就是说零空间 $N(f)$ 必定包含零向量。
 
 理由如下： 
 
-$$f(\pmb{0})=f(\pmb{x}-\pmb{x})=f(\pmb{x})-f(\pmb{x})=\pmb{0}$$ ，或者 $$f(\pmb{0})=f(0\pmb{x})=0\cdot f(\pmb{x})=\pmb{0}$$ 。
+$f(\pmb{0})=f(\pmb{x}-\pmb{x})=f(\pmb{x})-f(\pmb{x})=\pmb{0}$ ，或者 $f(\pmb{0})=f(0\pmb{x})=0\cdot f(\pmb{x})=\pmb{0}$ 。
 
 - 齐次线性方程组
 
-$$\begin{aligned}  x+y-z&=0\\    x-y+z&=0\end{aligned}$$
+$$
+\begin{aligned}  x+y-z&=0\\    x-y+z&=0\end{aligned}
+$$
+
+
 
 或改写为矩阵形式：
 
-$$f(\mathbf{x})=A\mathbf{x}=\left[\!\!\begin{array}{crr}    1&1&-1\\    1&-1&1    \end{array}\!\!\right]\begin{bmatrix}    x\\    y\\    z    \end{bmatrix}=\begin{bmatrix}    0\\    0    \end{bmatrix}$$
+$$
+f(\mathbf{x})=A\mathbf{x}=\left[\!\!\begin{array}{crr}    1&1&-1\\    1&-1&1    \end{array}\!\!\right]\begin{bmatrix}    x\\    y\\    z    \end{bmatrix}=\begin{bmatrix}    0\\    0    \end{bmatrix}
+$$
 
-利用高斯消元法，得：$$(x,y,z)=t(0,1,1)$$ ，$$t$$ 为任意实数，所以，$$A$$ 的零空間由向量 $$\begin{bmatrix}    0\\    1\\    1    \end{bmatrix}$$ 张成，零空間 $$N(f)$$ 与其表示矩阵 $$A$$ 的零空間 $$N(A)$$ 指的是同一回事。
+
+利用高斯消元法，得：$(x,y,z)=t(0,1,1)$ ，$t$ 为任意实数，所以，$A$ 的零空間由向量 $\begin{bmatrix}    0\\    1\\    1    \end{bmatrix}$ 张成，零空間 $N(f)$ 与其表示矩阵 $A$ 的零空間 $N(A)$ 指的是同一回事。
 
 - 微分算子
 
-微分算子 $$D=d/dx$$ 作用在 $$C(-\infty,\infty)$$ ，$$D$$ 的零空间包含所有一次导数为零的实函数，由导数性质可知 $$N(D)$$ 是一个包含所有常函数 $$y(x)=c$$ 的子空间。
+微分算子 $D=d/dx$ 作用在 $C(-\infty,\infty)$ ，$D$ 的零空间包含所有一次导数为零的实函数，由导数性质可知 $N(D)$ 是一个包含所有常函数 $y(x)=c$ 的子空间。
 
 - 齐次微分方程
 
 对于下面的齐次微分方程：
 
-$$y''-3y'+2y=0$$
+$$
+y''-3y'+2y=0
+$$
 
-也可以用微分算子表示为：
 
-$$(D^2-3D+2)y=0$$
+也可以用微分算子表示为：$(D^2-3D+2)y=0$
 
-线性算子的线性组合仍为线性算子，故：$$L=D^2-3D+2$$ 也是线性。
+线性算子的线性组合仍为线性算子，故：$L=D^2-3D+2$ 也是线性。
 
-求解齐次微分方程 $$Ly=0$$ ，即相当于计算 $$L$$ 的零空间。
+求解齐次微分方程 $Ly=0$ ，即相当于计算 $L$ 的零空间。
 
-线性算子 $$L$$ 的零空间由线性无关的函数 $$e^x$$ 和 $$e^{2x}$$ 张成，$$e^x$$ 和 $$e^{2x}$$ 是零空间 $$N(L)$$ 的基底函数，故齐次解为其线性組合 $$y=c_1e^x+c_2e^{2x}$$ 。从线性函数的角度，齐次解必定落在 $$L$$ 的零空间内，亦即
+线性算子 $L$ 的零空间由线性无关的函数 $e^x$ 和 $e^{2x}$ 张成，$e^x$ 和 $e^{2x}$ 是零空间 $N(L)$ 的基底函数，故齐次解为其线性組合 $y=c_1e^x+c_2e^{2x}$ 。从线性函数的角度，齐次解必定落在 $L$ 的零空间内，亦即
 
-$$Ly=l(c_1e^x+c_2e^{2x})=c_1L(e^x)+c_2L(e^{2x})=c_10+c_20=0$$
+$$
+Ly=l(c_1e^x+c_2e^{2x})=c_1L(e^x)+c_2L(e^{2x})=c_10+c_20=0
+$$
 
-### 特征值与特征向量$$^{[3]}$$
 
-假设一种线性变换 $$L:V\rightarrow V$$ ，还有向量 $$\pmb{x}\in V$$ ，通常 $$\pmb{x}$$ 和 $$L(\pmb{x})$$ 之间没有什么特别的关系，但是，在某个条件下，会有如下关系：
+### 特征值与特征向量
 
-$$L(\pmb{x})=\lambda\pmb{x}$$
+假设一种线性变换 $L:V\rightarrow V$ ，还有向量 $\pmb{x}\in V$ ，通常 $\pmb{x}$ 和 $L(\pmb{x})$ 之间没有什么特别的关系，但是，在某个条件下，会有如下关系：
 
-这就是特征向量 $$\pmb{x}$$ 和特征值 $$\lambda$$ 。
+$$
+L(\pmb{x})=\lambda\pmb{x}
+$$
 
-注意：零向量不是特征向量。这是因为，对于任意线性变换而言，任何 $$\lambda$$ 都会满足$$L(\pmb{0})=\lambda\cdot\pmb{0}=\pmb{0}$$ 。
 
-如果特征值为零，则只要存在 $$\pmb{x}\neq\pmb{0}$$ 满足$$L(\pmb{x})=0\pmb{x}=\pmb{0}$$  就行。显然，若线性变换 $$L$$ 有零特征值，则 $$L$$ 的零空间必定包含非零向量。
+这就是特征向量 $\pmb{x}$ 和特征值 $\lambda$ 。
+
+注意：零向量不是特征向量。这是因为，对于任意线性变换而言，任何 $\lambda$ 都会满足$L(\pmb{0})=\lambda\cdot\pmb{0}=\pmb{0}$ 。
+
+如果特征值为零，则只要存在 $\pmb{x}\neq\pmb{0}$ 满足$L(\pmb{x})=0\pmb{x}=\pmb{0}$  就行。显然，若线性变换 $L$ 有零特征值，则 $L$ 的零空间必定包含非零向量。
 
 - 矩阵变换
 
-设 $$L:\pmb{R}^n\rightarrow\pmb{R}^n$$ 为线性变换，以矩陣表示为：$$L(\pmb{x})=A\pmb{x}$$ 。
+设 $L:\pmb{R}^n\rightarrow\pmb{R}^n$ 为线性变换，以矩陣表示为：$L(\pmb{x})=A\pmb{x}$ 。
 
-例如：$$A=\begin{bmatrix}    1&4\\    2&8    \end{bmatrix}$$
+例如：$A=\begin{bmatrix}    1&4\\    2&8    \end{bmatrix}$
 
-容易解出其特征值 $$\lambda=0, 9$$ ，特征向量分别为：$$\begin{bmatrix} 4\\-1    \end{bmatrix}$$，$$\begin{bmatrix}    1\\    2    \end{bmatrix}$$。
+容易解出其特征值 $\lambda=0, 9$ ，特征向量分别为：$\begin{bmatrix} 4\\-1    \end{bmatrix}$，$\begin{bmatrix}    1\\    2    \end{bmatrix}$。
 
-注意，其次方程 $$A\pmb{x}=\pmb{0}$$ 对应 $$\lambda=0$$ ，故特征向量 $$\begin{bmatrix} 4\\-1    \end{bmatrix}$$ 张成 $$A$$ 的零空间。
+注意，其次方程 $A\pmb{x}=\pmb{0}$ 对应 $\lambda=0$ ，故特征向量 $\begin{bmatrix} 4\\-1    \end{bmatrix}$ 张成 $A$ 的零空间。
 
 
 - 微分算子
 
 假设以下微分算式：
 
-$$De^{x}=e^{x}, De^{2x}=2e^{2x}, De^{-3x}=-3e^{-3x}$$
+$$
+De^{x}=e^{x}, De^{2x}=2e^{2x}, De^{-3x}=-3e^{-3x}
+$$
 
-函数 $$e^{x}, e^{2x},e^{-3x}$$ 是微分算子 $$D$$ 的特征向量，对应特征值分别为 $$1,2,-3$$ 。
 
-推广：$$r$$ 是任意数，$$D^ke^{rx}=r^ke^{rx}$$ ，则 $$e^{rx}$$ 是 $$D^k$$ 的特征向量，对应的特征值为 $$r^k$$ 。
+函数 $e^{x}, e^{2x},e^{-3x}$ 是微分算子 $D$ 的特征向量，对应特征值分别为 $1,2,-3$ 。
+
+推广：$r$ 是任意数，$D^ke^{rx}=r^ke^{rx}$ ，则 $e^{rx}$ 是 $D^k$ 的特征向量，对应的特征值为 $r^k$ 。
 
 - 齐次微分方程
 
-考虑一个常系数齐次微分方程（前面用过的）：
+考虑一个常系数齐次微分方程（前面用过的）：$y''-3y'+2y=0$
 
-$$y''-3y'+2y=0$$
+若有 $L=D^2-3D+2$ ，则可以写为：$Ly=(D^2-3D+2)y=0$
 
-若有 $$L=D^2-3D+2$$ ，则可以写为：$$Ly=(D^2-3D+2)y=0$$
+如前所述，求齐次微分方程的解，就等于计算 $L$ 的零空间，也就是找出特征值为 $\lambda=0$ 的特征向量，如下：
 
-如前所述，求齐次微分方程的解，就等于计算 $$L$$ 的零空间，也就是找出特征值为 $$\lambda=0$$ 的特征向量，如下：
+$$
+Le^{rx}=(r^2-3r+2)e^{rx}=0
+$$
 
-$$Le^{rx}=(r^2-3r+2)e^{rx}=0$$
 
-因为 $$e^{rx}\ne0$$ ，则必有 $$\lambda=r^2-3r+2=0$$ ，则 $$r=1,2$$ ，特征向量为 $$e^x, e^{2x}$$ ，所对应的特征值均为 $$0$$ 。
+因为 $e^{rx}\ne0$ ，则必有 $\lambda=r^2-3r+2=0$ ，则 $r=1,2$ ，特征向量为 $e^x, e^{2x}$ ，所对应的特征值均为 $0$ 。
 
-故：**求解齊次微分方程的本質就是問線性算子 $$L$$ 的哪些特徵向量對應零特徵值**$$^{[1]}$$。
+故：**求解齊次微分方程的本質就是問線性算子 $L$ 的哪些特徵向量對應零特徵值**$^{[1]}$。
 
 ### 非齐次方程
 
-设 $$f:V\to W$$ 是一个线性函数，对应的非齐次方程：
+设 $f:V\to W$ 是一个线性函数，对应的非齐次方程：$f(\pmb{x})=\pmb{b}$
 
-$$f(\pmb{x})=\pmb{b}$$
-
-下面证明**叠加原理**：若 $$\pmb{x}_p$$ 是上述非齐次方程的一个特解（particular solution），$$\pmb{x}_h$$ 是齐次方程 $$f(\pmb{x})$$ 的一个解（称为齐次解），则 $$\pmb{x}_p+\pmb{x}_h$$ 是非齐次方程的通解（或一般解，general solution）。
+下面证明**叠加原理**：若 $\pmb{x}_p$ 是上述非齐次方程的一个特解（particular solution），$\pmb{x}_h$ 是齐次方程 $f(\pmb{x})$ 的一个解（称为齐次解），则 $\pmb{x}_p+\pmb{x}_h$ 是非齐次方程的通解（或一般解，general solution）。
 
 证明：
 
-因为 $$\pmb{x}_p$$ 是一个特解，则 $$f(\pmb{x}_p)=\pmb{b}$$ 。
+因为 $\pmb{x}_p$ 是一个特解，则 $f(\pmb{x}_p)=\pmb{b}$ 。
 
-又因为 $$f$$ 是线性函数，所以：
+又因为 $f$ 是线性函数，所以：$f(\pmb{x}-\pmb{x}_p)=f(\pmb{x})-f(\pmb{x}_p)=\pmb{b}-\pmb{b}=\pmb{0}$
 
-$$f(\pmb{x}-\pmb{x}_p)=f(\pmb{x})-f(\pmb{x}_p)=\pmb{b}-\pmb{b}=\pmb{0}$$
-
-故 $$\pmb{x}-\pmb{x}_p$$ 是齐次解，即 $$\pmb{x}-\pmb{x}_p=\pmb{x}_h$$ ，$$\pmb{x}_h$$ 是零空间中的一个向量，故 $$\pmb{x}=\pmb{x}_p+\pmb{x}_h$$ 是通解。
+故 $\pmb{x}-\pmb{x}_p$ 是齐次解，即 $\pmb{x}-\pmb{x}_p=\pmb{x}_h$ ，$\pmb{x}_h$ 是零空间中的一个向量，故 $\pmb{x}=\pmb{x}_p+\pmb{x}_h$ 是通解。
 
 - 非齐次线性方程组
 
 以下述非齐次线性方程组为例：
 
-$$\begin{cases}x+y-z=2\\x-y+z=4\end{cases}$$
+$$
+\begin{cases}x+y-z=2\\x-y+z=4\end{cases}
+$$
 
-其一个特解：$$x=3,y=1,z=2$$ ，前面已经计算过对应的齐次线性方程组的解：$$(x,y,z)=t(0,1,1)$$ ，其中 $$t$$ 是任意实数。故此非齐次线性方程组的通解是：
 
-$$(x,y,z)=(3,1,2)+t(0,1,1)$$
+其一个特解：$x=3,y=1,z=2$ ，前面已经计算过对应的齐次线性方程组的解：$(x,y,z)=t(0,1,1)$ ，其中 $t$ 是任意实数。故此非齐次线性方程组的通解是：$(x,y,z)=(3,1,2)+t(0,1,1)$
 
 - 常系数微分方程
 
-以下面的非齐次微分方程为例：
+以下面的非齐次微分方程为例：$y''-3y'+2y=e^x$
 
-$$y''-3y'+2y=e^x$$
-
-用微分算子表示为：$$Ly=(D^2-3D+2)y=e^x$$ 。
+用微分算子表示为：$Ly=(D^2-3D+2)y=e^x$ 。
 
 用待定系数法求出一个特解：
 
-$$\because\quad(D-1)e^x=0$$ 
+$$
+\because\quad(D-1)e^x=0
+$$
+ 
 
-对于任何解 $$y(x)$$ ，有：
+对于任何解 $y(x)$ ，有：
 
-$$(D-1)(D^2-3D+2)y=(D-1)^2(D-2)y=0$$
+$$
+(D-1)(D^2-3D+2)y=(D-1)^2(D-2)y=0
+$$
 
-根据齐次微分方程的求解，$$y(x)$$ 的形式必为：
 
-$$y(x)=c_1e^x+c_2e^{2x}+c_3xe^x$$
+根据齐次微分方程的求解，$y(x)$ 的形式必为：
 
-显然，前两项是齐次解，$$y_h(x)=c_2e^x+c_2e^{2x}$$ 。设 $$y_p(x)=c_3xe^x$$ ，计算：
+$$
+y(x)=c_1e^x+c_2e^{2x}+c_3xe^x
+$$
 
-$$\begin{split}y'_p(x)&=c_3(xe^x+e^x)\\y''_p(x)&=c_3(xe^x+2e^x)\end{split}$$ 
+
+显然，前两项是齐次解，$y_h(x)=c_2e^x+c_2e^{2x}$ 。设 $y_p(x)=c_3xe^x$ ，计算：
+
+$$
+\begin{split}y'_p(x)&=c_3(xe^x+e^x)\\y''_p(x)&=c_3(xe^x+2e^x)\end{split}
+$$
+ 
 
 代入到非齐次微分方程中，得：
 
-$$c_3(xe^x+2e^x)-3c_3(xe^x+e^x)+2c_3(xe^x)=e^x$$
+$$
+c_3(xe^x+2e^x)-3c_3(xe^x+e^x)+2c_3(xe^x)=e^x
+$$
 
-$$c_3=-1$$
+$$
+c_3=-1
+$$
 
-得到特解：$$y_p=-xe^x$$
 
-故通解为：$$y(x)=c_1e^x+c_2e^{2x}-xe^x$$
+得到特解：$y_p=-xe^x$
+
+故通解为：$y(x)=c_1e^x+c_2e^{2x}-xe^x$
 
 
 
@@ -251,6 +305,4 @@ $$c_3=-1$$
 
 [1]. [线代启示录：从几何向量空间到函数空间](https://ccjou.wordpress.com/2009/08/18/%e5%be%9e%e5%b9%be%e4%bd%95%e5%90%91%e9%87%8f%e7%a9%ba%e9%96%93%e5%88%b0%e5%87%bd%e6%95%b8%e7%a9%ba%e9%96%93/)
 
-[2]. [线性代数基本定理](./basetheory.html)
-
-[3]. [理解特征值和特征向量](./eigenvalueandeigenvector.html)
+[2]. [线性代数基本定理](https://lqlab.readthedocs.io/en/latest/math4ML/linearalgebra/basetheory.html)
