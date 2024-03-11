@@ -15,7 +15,7 @@
 
 ## 配套视频课程
 
-- 博文视点学院：[机器学习数学基础视频教程](https://appqtulvsie4217.pc.xiaoe-tech.com/detail/p_6243c2a9e4b01c509a9c1c8e/6)
+- 研途学堂：[机器学习数学基础视频教程](https://yantucs.com/series/XL100124xxxxxx?uname=ec10ef51f3d07f5bb2efaa1b0f94b83c)
 
 
 ## 本书介绍
